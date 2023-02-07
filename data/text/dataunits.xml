@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too unit list verison : 0.5-->
+<unitlist>
+    <unit type ="1000">
+    	    <name>Colonists</name>
+	    	<class>Civil</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>0</attack>
+	    	<defense>1</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>22</graphic>
+	    	<grsmall>23</grsmall>
+    </unit>
+    <unit type ="1001">
+    	    <name>Soldiers</name>
+	    	<class>Military</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>2</attack>
+	    	<defense>2</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>27</graphic>
+	    	<grsmall>37</grsmall>
+	    	<egraphic skill="1516">17</egraphic>
+    </unit>
+    <unit type ="1002">
+    	    <name>Pioneers</name>
+	    	<class>Civil</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>0</attack>
+	    	<defense>1</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>29</graphic>
+	    	<grsmall>24</grsmall>
+	    	<egraphic skill="1511">11</egraphic>
+    </unit>
+    <unit type ="1003">
+    	    <name>Missionaries</name>
+	    	<class>Civil</class>
+            <move>2</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>0</attack>
+	    	<defense>1</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>14</graphic>
+	    	<grsmall>35</grsmall>
+    </unit>
+    <unit type ="1004">
+    	    <name>Dragoons</name>
+	    	<class>Military</class>
+            <move>4</move>
+	    	<hits>0</hits>
+	    	<visual>2</visual>
+	    	<attack>3</attack>
+	    	<defense>3</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>28</graphic>
+	    	<grsmall>36</grsmall>
+	    	<egraphic skill="1516">18</egraphic>
+    </unit>
+    <unit type ="1005">
+    	    <name>Scouts</name>
+	    	<class>Civil</class>
+            <move>4</move>
+	    	<hits>0</hits>
+	    	<visual>2</visual>
+	    	<attack>1</attack>
+	    	<defense>1</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>30</graphic>
+	    	<grsmall>26</grsmall>
+	    	<egraphic skill="1520">23</egraphic>
+    </unit>
+    <unit type ="1006">
+    	    <name>Regulars</name>
+	    	<class>Military</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>5</attack>
+	    	<defense>5</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>64</graphic>
+	    	<grsmall>37</grsmall>
+    </unit>
+    <unit type ="1007">
+    	    <name>Cont. Cav.</name>
+	    	<class>Military</class>
+            <move>4</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>5</attack>
+	    	<defense>5</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>35</graphic>
+	    	<grsmall>36</grsmall>
+    </unit>
+    <unit type ="1008">
+    	    <name>Cavalry</name>
+	    	<class>Military</class>
+            <move>4</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>6</attack>
+	    	<defense>6</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>65</graphic>
+	    	<grsmall>36</grsmall>
+    </unit>
+    <unit type ="1009">
+    	    <name>Cont. Army</name>
+	    	<class>Military</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>4</attack>
+	    	<defense>4</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>34</graphic>
+	    	<grsmall>37</grsmall>
+    </unit>
+    <unit type ="1010">
+    	    <name>Treasure</name>
+	    	<class>Civil</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>0</attack>
+	    	<defense>0</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>6</size>
+	    	<graphic>33</graphic>
+	    	<grsmall>41</grsmall>
+    </unit>
+    <unit type ="1011">
+    	    <name>Artillery</name>
+	    	<class>Military</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>7</attack>
+	    	<defense>5</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>1</size>
+	    	<graphic>36</graphic>
+	    	<grsmall>34</grsmall>
+    </unit>
+    <unit type ="1012">
+    	    <name>Wagon Train</name>
+	    	<class>Civil</class>
+            <move>2</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>0</attack>
+	    	<defense>1</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>2</cargo>
+	    	<size>99</size>
+	    	<graphic>32</graphic>
+	    	<grsmall>40</grsmall>
+    </unit>
+    <unit type ="1013">
+    	    <name>Caravel</name>
+	    	<class>Naval</class>
+            <move>4</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>0</attack>
+	    	<defense>2</defense>
+	    	<skill>0</skill>
+	    	<transport>3</transport>
+	    	<cargo>2</cargo>
+	    	<size>99</size>
+	    	<graphic>37</graphic>
+	    	<grsmall>50</grsmall>
+    </unit>
+    <unit type ="1014">
+    	    <name>Merchantman</name>
+	    	<class>Naval</class>
+            <move>5</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>0</attack>
+	    	<defense>6</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>4</cargo>
+	    	<size>99</size>
+	    	<graphic>38</graphic>
+	    	<grsmall>50</grsmall>
+    </unit>
+    <unit type ="1015">
+    	    <name>Galleon</name>
+	    	<class>Naval</class>
+            <move>6</move>
+	    	<hits>0</hits>
+	    	<visual>2</visual>
+	    	<attack>0</attack>
+	    	<defense>10</defense>
+	    	<skill>0</skill>
+	    	<transport>4</transport>
+	    	<cargo>6</cargo>
+	    	<size>99</size>
+	    	<graphic>39</graphic>
+	    	<grsmall>54</grsmall>
+    </unit>
+    <unit type ="1016">
+    	    <name>Privateer</name>
+	    	<class>Naval</class>
+            <move>8</move>
+	    	<hits>0</hits>
+	    	<visual>2</visual>
+	    	<attack>8</attack>
+	    	<defense>8</defense>
+	    	<skill>0</skill>
+	    	<transport>2</transport>
+	    	<cargo>2</cargo>
+	    	<size>99</size>
+	    	<graphic>40</graphic>
+	    	<grsmall>51</grsmall>
+    </unit>
+    <unit type ="1017">
+    	    <name>Frigate</name>
+	    	<class>Naval</class>
+            <move>6</move>
+	    	<hits>0</hits>
+	    	<visual>2</visual>
+	    	<attack>16</attack>
+	    	<defense>16</defense>
+	    	<skill>0</skill>
+	    	<transport>2</transport>
+	    	<cargo>4</cargo>
+	    	<size>99</size>
+	    	<graphic>41</graphic>
+	    	<grsmall>55</grsmall>
+    </unit>
+    <unit type ="1018">
+    	    <name>Man-O-War</name>
+	    	<class>Naval</class>
+            <move>5</move>
+	    	<hits>0</hits>
+	    	<visual>2</visual>
+	    	<attack>24</attack>
+	    	<defense>24</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>6</cargo>
+	    	<size>99</size>
+	    	<graphic>42</graphic>
+	    	<grsmall>55</grsmall>
+    </unit>
+    <unit type ="1019">
+    	    <name>Braves</name>
+	    	<class>Natives</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>1</attack>
+	    	<defense>1</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>0</size>
+	    	<graphic>60</graphic>
+	    	<grsmall>0</grsmall>
+    </unit>
+    <unit type ="1020">
+    	    <name>Armed Braves</name>
+	    	<class>Natives</class>
+            <move>1</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>2</attack>
+	    	<defense>2</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>0</size>
+	    	<graphic>61</graphic>
+	    	<grsmall>1</grsmall>
+    </unit>
+    <unit type ="1021">
+    	    <name>Mtd. Braves</name>
+	    	<class>Natives</class>
+            <move>4</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>2</attack>
+	    	<defense>2</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>0</size>
+	    	<graphic>62</graphic>
+	    	<grsmall>2</grsmall>
+    </unit>
+    <unit type ="1022">
+    	    <name>Mtd. Warriors</name>
+	    	<class>Natives</class>
+            <move>4</move>
+	    	<hits>0</hits>
+	    	<visual>1</visual>
+	    	<attack>3</attack>
+	    	<defense>3</defense>
+	    	<skill>0</skill>
+	    	<transport>0</transport>
+	    	<cargo>0</cargo>
+	    	<size>0</size>
+	    	<graphic>63</graphic>
+	    	<grsmall>3</grsmall>
+    </unit>
+</unitlist>

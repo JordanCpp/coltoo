@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too game labels verison : 0.1-->
+<joblist>
+	<job id="0">
+		<name>None</name>
+		<cost>0</cost>
+	</job>
+	<job id="1">
+		<name>Ore Miner</name>
+		<cost>600</cost>
+	</job>
+	<job id="2">
+		<name>Lumberjack</name>
+		<cost>700</cost>
+	</job>
+	<job id="3">
+		<name>Armorer</name>
+		<cost>850</cost>
+	</job>
+	<job id="4">
+		<name>Silver Miner</name>
+		<cost>900</cost>
+	</job>
+	<job id="5">
+		<name>Hatter</name>
+		<cost>950</cost>
+	</job>
+	<job id="6">
+		<name>Sawyer</name>
+		<cost>1000</cost>
+	</job>
+	<job id="7">
+		<name>Fisher</name>
+		<cost>1000</cost>
+	</job>
+	<job id="8">
+		<name>Blacksmith</name>
+		<cost>1050</cost>
+	</job>
+	<job id="9">
+		<name>Wheat Farmer</name>
+		<cost>1100</cost>
+	</job>
+	<job id="10">
+		<name>Distiller</name>
+		<cost>1100</cost>
+	</job>
+	<job id="11">
+		<name>Settler</name>
+		<cost>1200</cost>
+	</job>
+	<job id="12">
+		<name>Tobacconist</name>
+		<cost>1200</cost>
+	</job>
+	<job id="13">
+		<name>Clothmaker</name>
+		<cost>1300</cost>
+	</job>
+	<job id="14">
+		<name>Missionary</name>
+		<cost>1400</cost>
+	</job>
+	<job id="15">
+		<name>Preacher</name>
+		<cost>1500</cost>
+	</job>
+	<job id="16">
+		<name>Statesman</name>
+		<cost>1900</cost>
+	</job>
+	<job id="17">
+		<name>Soldier</name>
+		<cost>2000</cost>
+	</job>
+	<job id="18">
+		<name>Cavalry</name>
+		<cost>0</cost>
+	</job>
+	<job id="19">
+		<name>Instructor</name>
+		<cost>0</cost>
+	</job>
+	<job id="20">
+		<name>Criminal</name>
+		<cost>0</cost>
+	</job>
+	<job id="21">
+		<name>Servant</name>
+		<cost>0</cost>
+	</job>
+	<job id="22">
+		<name>Colonist</name>
+		<cost>0</cost>
+	</job>
+	<job id="23">
+		<name>Explorer</name>
+		<cost>0</cost>
+	</job>	
+	<job id="24">
+		<name>Sugar Farmer</name>
+		<cost>0</cost>
+	</job>
+	<job id="25">
+		<name>Tobacco Farmer</name>
+		<cost>0</cost>
+	</job>
+	<job id="26">
+		<name>Cotton Farmer</name>
+		<cost>0</cost>
+	</job>
+	<job id="27">
+		<name>Trapper</name>
+		<cost>0</cost>
+	</job>
+
+</joblist>
+
+<orderlist>
+	<order id="0">
+		<name>Activate Unit</name>
+	</order>
+	<order id="1">
+		<name>Wait for Next</name>
+	</order>
+	<order id="2">
+		<name>Fortify</name>
+	</order>
+	<order id="3">
+		<name>Sentry</name>
+	</order>
+	<order id="4">
+		<name>Plow Fields   (P)</name>
+	</order>
+	<order id="5">
+		<name>Build Road    (R)</name>
+	</order>
+	<order id="6">
+		<name>Clear Forest  (C)</name>
+	</order>
+	<order id="7">
+		<name>Build Colony  (B)</name>
+	</order>
+	<order id="8">
+		<name>No Orders</name>
+	</order>
+	<order id="9">
+		<name>Disband</name>
+	</order>
+		
+</orderlist>
+
+
+<menulist>
+	<menu id="0">
+		<name>Game</name>
+		<entry id="0">Game Options</entry>
+		<entry id="1">Colony Report Options</entry>
+		<entry id="2">Sound Options</entry>
+		<entry id="3">Pick Music</entry>
+		<entry id="4">Save Game</entry>
+		<entry id="5">Load Game</entry>
+		<entry id="6">Declare Independence</entry>
+		<entry id="7">Retire</entry>
+		<entry id="8">Exit</entry>
+	</menu>
+
+	<menu id="1">
+		<name>View</name>
+		<entry id="0">The Home Country</entry>
+		<entry id="1">The Colony Display</entry>
+	</menu>
+
+	<menu id="2">
+		<name>Buy</name>
+		<entry id="0">Artillery</entry>
+		<entry id="1">Caravel</entry>
+		<entry id="2">Merchantman</entry>
+		<entry id="3">Galleon</entry>
+		<entry id="4">Privateer</entry>
+		<entry id="5">Frigate</entry>
+	</menu>
+</menulist>
+
+<buildpricelist>
+	<item id="0">500</item>
+	<item id="0">1000</item>
+	<item id="0">2000</item>
+	<item id="0">3000</item>
+	<item id="0">4000</item>
+</buildpricelist>
+
+<?--The next should be different -->
+
+<labels>
+	<entry>Game</entry>
+	<entry>View</entry>
+	<entry>Orders</entry>
+	<entry>Reports</entry>
+	<entry>Trade</entry>
+	<entry>Assistance</entry>
+	<entry>Q u i t</entry>
+	<entry>Zoom out</entry>
+	<entry>Zoom in</entry>
+	<entry>C</entry>
+	<entry>P</entry>
+	<entry>R</entry>
+	<entry>B</entry>
+	<entry>CDS</entry>
+	<entry>HCS</entry>
+	<entry>MAP</entry>
+	<entry>Recruit</entry>
+	<entry>Purchase</entry>
+	<entry>Train</entry>
+	<entry>G</entry>
+	<entry>E</entry>
+	<entry>Buy</entry>
+	<entry>Hire</entry>
+	<entry>Pay Transportation Cost</entry>
+	<entry>Set Sail</entry>
+	<entry>Auto</entry>
+	<entry>Board</entry>
+	<entry>Sailed</entry>
+	<entry>Due Soon</entry>
+	<entry>In Port</entry>
+	<entry>Waiting on the Docks</entry>
+	<entry>Under Orders</entry>
+	<entry>Unassigned</entry>
+	<entry>Transports</entry>
+</labels>

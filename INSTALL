@@ -1,0 +1,45 @@
+
+COLONIZATION TOO INSTALLATION NOTES - build 03j
+
+
+- WINDOWS
+
+Colonization Too was tested on most Win32 systems, including
+Windows 95, Windows 98, Windows XP, and Windows Server 2003.
+The Windows version requires several open source libraries,
+available as DLLs. These libraries are:
+
+SDL.dll
+SDL_image.dll
+SDL_ttf.dll
+
+If these libraries are not included in your package, you can
+download them either all in one from the project site:
+http://www.civgaming.net/col2/datafiles/runtime.zip
+or separately, from the SDL site http://libsdl.org.
+Also, make sure your configuration supports 1024*768.
+
+The code was compiled using the Mingw32 compilers; Mingw32
+is included in Dev-Cpp IDE, which is used for Colonization
+Too development. You can either use the .dev file in Dev-Cpp
+or compile it using the small "build-mingw32.exe" utility.
+You will also need headers and .a import libraries for SDL.
+
+
+- UNIX/LINUX
+
+The code was tested with Debian GNU/Linux, kernel 2.6.x, SDL
+1.2.x, XFree86 4.x. Testing reports for any other platforms
+and configurations are always welcome.
+To run the game, you must have SDL, SDL_image and SDL_ttf
+libraries installed; you can download them from the SDL site
+http://libsdl.org.
+To compile the code, just run make-release.sh. The debug .sh
+file is needed for developers to turn on debug output.
+
+Before running, make sure your X Window System is configured
+to support 1024*768 resolution. Also make sure you run it
+from an X session and not directly from the console.
+
+
+Sikon <sikon@sourceforge.net>

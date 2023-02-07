@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too general options -->
+<options>
+	<graphic mode="fullscreen">
+		<resolution width="1024" height="768"/>
+		<opening use="no" delay="1000"/>
+		<splash use="no" delay="1500"/>
+	</graphic>
+</options>

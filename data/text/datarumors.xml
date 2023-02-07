@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too game rumor messages-->
+<rumorlist>
+	<rumor id="0">
+	<text>You've just stumbled across the Lost Dutchman's Gold Mine! A treasure of 10,000 gps is now all yours!</text>
+	</rumor>
+
+	<rumor id="1">
+	<text>You've found fabled El Dorado! The natives cover you with Gold Dust. This vast treasure, worth 15,000 gps is yours!</text>
+	</rumor>
+
+	<rumor id="2">
+	<text>Hostile natives surprise you. They steal your horses and much of your supplies.  You're now hungry and on foot. Good Luck!</text>
+	</rumor>
+
+	<rumor id="3">
+	<text>A roving war party captures you. Laughing, They make you a captive. You spend the rest of your days as a wretched slave!</text>
+	</rumor>
+
+	<rumor id="4">
+	<text>Nothing here but some squalid huts and some hungry natives. You best make tracks before they get ideas! HURRY! Or you're DEAD!</text>
+	</rumor>
+
+</rumorlist>

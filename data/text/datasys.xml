@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too game system messages-->
+<sysmessagelist>
+	<message id="0">
+	<text>
+	Sorry! This Function is not yet implemented.
+	</text>
+	</message>
+
+	<message id="1">
+	<text>
+	Gee!  Isn't there already a
+	Road here?  What do you want?
+	A superhighway?
+	</text>
+	</message>
+
+	<message id="2">
+	<text>
+	Hey!  How many times are you
+	going to Plow this field? 
+	</text>
+	</message>
+
+	<message id="3">
+	<text>
+	There's already a colony here!
+	Are you planning on building
+	a bunch of highrises?
+	</text>
+	</message>
+
+	<message id="4">
+	<text>
+	Duh!  What are you going to 
+	Clear?  There ain't a tree 
+	in sight!
+	</text>
+	</message>
+
+	<message id="5">
+	<text>
+	No more room on the selected ship for passengers.
+	</text>
+	</message>
+
+	<message id="6">
+	<text>
+	Not enough room left on the selected ship.
+	</text>
+	</message>
+
+	<message id="7">
+	<text>
+	In 1600, the time scale changes from one turn per year to
+	two turns per year.  Henceforth there will be a Spring and
+	a Fall turn in each year.
+	</text>
+	</message>
+
+	<message id="8">
+	<text>
+	This unit type cannot attack.
+	</text>
+	</message>
+
+	<message id="9">
+	<text>
+	Normally, there should have been a Combat Analysis window
+	here, but it is not that easy to implement for now.
+	</text>
+	</message>
+
+	<message id="10">
+	<text>
+	End of Turn.
+	</text>
+	</message>
+
+	<message id="11">
+	<text>
+	We should build at least one colony until we can bring up
+	the Colony Display Screen, Your Excellency.
+	</text>
+	</message>
+</sysmessagelist>

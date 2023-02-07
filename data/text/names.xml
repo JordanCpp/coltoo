@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too names list -->
+<names>
+	<country>
+		<name>England</name>
+		<color>255,0,0</color>
+		<nationality>English</nationality>
+		<abbrev>Eng.</abbrev>
+		<homeport>London</homeport>
+		<colonyname>New England</colonyname>
+		<independent>United States of America</independent>
+		<leaderName>Walter Raleigh</leaderName>
+		<leaderAttitude> 1,-1, 0</leaderAttitude>
+		<mission>Church of</mission>
+	</country>
+	<country>
+		<name>France</name>
+		<color>110,110,250</color>
+		<nationality>French</nationality>
+		<abbrev>Fr.</abbrev>
+		<homeport>La Rochelle</homeport>
+		<colonyname>New France</colonyname>
+		<independent>Republic of Quebec</independent>
+		<leaderName>Jacques Cartier</leaderName>
+		<leaderAttitude> 0, 1, 0</leaderAttitude>
+		<mission>Sainte Marie de</mission>
+	</country>
+	<country>
+		<name>Spain</name>
+		<color>255,255,0</color>
+		<nationality>Spanish</nationality>
+		<abbrev>Span.</abbrev>
+		<homeport>Seville</homeport>
+		<colonyname>New Spain</colonyname>
+		<independent>Republic of Mexico</independent>
+		<leaderName>Christopher Columbus</leaderName>
+		<leaderAttitude> 1, 0,-1</leaderAttitude>
+		<mission>Santa Maria del</mission>
+	</country>
+	<country>
+		<name>Netherlands</name>
+		<color>250,110,0</color>
+		<nationality>Dutch</nationality>
+		<abbrev>Dutch</abbrev>
+		<homeport>Amsterdam</homeport>
+		<colonyname>New Netherlands</colonyname>
+		<independent>Republic of Surinam</independent>
+		<leaderName>Michiel de Ruyter</leaderName>
+		<leaderAttitude>-1, 0, 1</leaderAttitude>
+		<mission>Church of</mission>
+	</country>
+</names>

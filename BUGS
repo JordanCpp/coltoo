@@ -1,0 +1,52 @@
+
+COLONIZATION TOO KNOWN BUGS - build 03j
+
+If you do not see your bug in the list, you are free to
+report it on the project forum or using the SourceForge bug
+tracker. For links, see README.
+
+
+- Gold amount
+
+The gold amount can go negative; there is no check if 
+the player can afford what he's trying to pay for.
+
+
+- No screen redraw after alt-tab
+
+On Windows there are some issues when returning to the full-
+screen game with alt-tab.
+
+When returning to the map the screen is black except for the
+tile with the current unit. When moving, the entire screen
+is redrawn.
+
+When returning to the HCS the entire screen is black as
+well. Only the box with the available units is redrawn when
+moving the mouse over them.
+
+
+- Shrouded units
+
+Foreign units are full-colored under the partial shroud,
+unlike Natives (which are grayed). 
+
+
+- 100% CPU when idling
+
+The game uses 100% CPU when nothing is happening. This
+affects overall system performance.
+
+
+- Game window too big
+
+The game window is too big for a monitor running on 1024*768
+and can't be resized.
+
+As a consequence part of the screen is inaccessible/hidden.
+
+NOTE: the game uses full-screen mode by default. It is not
+recommended to switch to window mode via options.xml.
+
+
+Sikon <sikon@sourceforge.net>

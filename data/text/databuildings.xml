@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too building list -->
+<buildings>
+    <building type="2000">
+    	<name>Town Hall</name>
+    	<graphic type="L">2</graphic>
+    </building>
+    <building type="2001">
+    	<name>Carpenter's Shop</name>
+    	<graphic type="S">1</graphic>
+    </building>
+    <building type="2002">
+    	<name>Fur Trader's House</name>
+    	<graphic type="S">6</graphic>
+    </building>
+    <building type="2003">
+    	<name>Blacksmith's House</name>
+    	<graphic type="S">11</graphic>
+    </building>
+    <building type="2004">
+    	<name>Rum Distiller's House</name>
+    	<graphic type="S">13</graphic>
+    </building>
+    <building type="2005">
+    	<name>Tobacconist's House</name>
+    	<graphic type="S">20</graphic>
+    </building>
+    <building type="2006">
+    	<name>Weaver's House</name>
+    	<graphic type="S">26</graphic>
+    </building>
+</buildings>

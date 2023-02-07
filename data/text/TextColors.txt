@@ -1,0 +1,10 @@
+255,255,255,	16,32,0
+192,255,128,	0,0,0
+255,204,0,	0,0,0
+
+First 3 numbers are the	Foreground color (Do not use black. 0,0,0)
+Second set is the Shading (Do not use yellow.  255,255,0)
+
+Font1- Push Buttons
+Font2- Titles
+Font3- Information

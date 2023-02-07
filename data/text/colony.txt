@@ -1,0 +1,186 @@
+@ENGLISH
+Jamestown
+Plymouth
+Roanoke
+Barbados
+Penobscot
+Boston
+Baltimore
+Providence
+Hartford
+New Haven
+New York
+Albany
+New Jersey
+Charleston
+Philadelphia
+Newport
+Yorktown
+Annapolis
+Halifax
+Lexington
+Savannah
+Williamsburg
+St. John's
+Norfolk
+Concord
+Wilmington
+Richmond
+Portsmouth
+Camden
+Springfield
+Newport News
+Antigua
+Rupert House
+Kingston
+Reading
+Ottawa
+@STOP
+
+@FRENCH
+Quebec
+Montreal
+Guadeloupe
+Cayenne
+St. Louis
+Martinique
+Port Royal
+Port au Prince
+Trois Rivieres
+New Orleans
+Fort Caroline
+Fort Detroit
+Fort Frontenac
+Fort Pontchartain
+Fort Tadoussac
+Fort Canada
+Fort Niagara
+Fort Crevecoeur
+Fort Roquelai
+Fort Laguille
+Fort Brest
+Fort Richelieu
+Fort Louis
+Fort Prudhome
+Fort Sandouski
+Fort du Quesne
+Fort Erie
+Fort Maurepas
+Fort Francois Xavier
+Fort St. Michel
+Fort Chicago
+Fort-de-France
+Fort Frances
+Fort St. Joseph
+Fort Miannis
+Fort Orleans
+Fort St. Ignace
+Fort Le Rocher
+Fort Miyamis
+Fort Rosalie
+Fort Balise
+Fort Conde
+Fort Pensacola
+Fort Toulouse
+Fort St. John
+Fort Kappa
+Fort Biloxi
+Fort Mobile
+Sault Ste. Marie
+Baton Rouge
+Denonville
+Gananoque
+St. Croix
+Port Cartier
+Terre Haute
+Trois Pistoles
+Sept-Iles
+Louisville
+St. Barthelemy
+St. Pierre
+Miquelon
+Des Moines
+Havre St. Pierre
+Port Menier
+Portage la Prairie
+St. Boniface
+@STOP
+
+@SPANISH
+Isabella
+Santo Domingo
+San Salvador
+Veracruz
+Havana
+Trinidad
+San Juan
+Panama
+Cartajena
+St. Augustine
+Lima
+Buenos Aires
+Guatemala
+Honduras
+Potosi
+Santiago
+Guadalajara
+Asuncion
+Managua
+Costa Rica
+Santa Fe
+Los Angeles
+Bogota
+Corpus Christi
+Acapulco
+Santa Marta
+San Agostin
+Caracas
+Tobago
+San Francisco
+Santiago
+San Diego
+San Angelo
+El Paso
+Cancun
+Valparaiso
+Concepcion
+La Plata
+Port of Spain
+@STOP
+
+@DUTCH
+Detroit
+Lansing
+Indianpolis
+Flint
+Bay City
+Grand Rapids
+Bloomington
+Middletown
+Dayton
+Bloomfield
+Midland
+Saginaw
+Dearborn
+Hamtramck
+Fort Wayne
+South Bend
+Mackinaw
+Fort Sill
+Butzbach
+Giessen
+Dallas
+Omaha
+Windsor
+Chicago
+Denver
+Hartford
+Jackson
+Oakland
+Cass
+Fort Worth
+Fort Monroe
+Redford
+Default
+@STOP
+ÿ

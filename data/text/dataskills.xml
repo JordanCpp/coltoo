@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too skill list verison : 0.5-->
+<skills>
+    <skill type="1500">
+    	    <name>Colonist</name>
+	    <long>Free Colonists</long>
+	    <graphic>22</graphic>
+    </skill>
+    <skill type="1501">
+    	    <name>Ore Miner</name>
+	    <long>Expert Ore Miners</long>
+	    <graphic>1</graphic>
+    </skill>
+    <skill type="1502">
+    	    <name>Lumberjack</name>
+	    <long>Expert Lumberjacks</long>
+	    <graphic>2</graphic>
+    </skill>
+    <skill type="1503">
+    	    <name>Armorer</name>
+	    <long>Master Armorers</long>
+	    <graphic>3</graphic>
+    </skill>
+    <skill type="1504">
+    	    <name>Silver Miner</name>
+	    <long>Expert Silver Miners</long>
+	    <graphic>4</graphic>
+    </skill>
+    <skill type="1505">
+    	    <name>Hatter</name>
+	    <long>Master Hatters</long>
+	    <graphic>5</graphic>
+    </skill>
+    <skill type="1506">
+    	    <name>Sawyer</name>
+	    <long>Master Sawyers</long>
+	    <graphic>6</graphic>
+    </skill>
+    <skill type="1507">
+    	    <name>Fisher</name>
+	    <long>Expert Fishers</long>
+	    <graphic>7</graphic>
+    </skill>
+    <skill type="1508">
+    	    <name>Blacksmith</name>
+	    <long>Master Blacksmiths</long>
+	    <graphic>8</graphic>
+    </skill>
+    <skill type="1509">
+    	    <name>Wheat Farmer</name>
+	    <long>Expert Wheat Farmers</long>
+	    <graphic>9</graphic>
+    </skill>
+    <skill type="1510">
+    	    <name>Distiller</name>
+	    <long>Master Distillers</long>
+	    <graphic>10</graphic>
+    </skill>
+    <skill type="1511">
+    	    <name>Pioneer</name>
+	    <long>Hardy Pioneers</long>
+	    <graphic>25</graphic>
+    </skill>
+    <skill type="1511">
+    	    <name>Tobacconist</name>
+	    <long>Master Tobacconists</long>
+	    <graphic>12</graphic>
+    </skill>
+    <skill type="1512">
+    	    <name>Clothmaker</name>
+	    <long>Master Clothmakers</long>
+	    <graphic>13</graphic>
+    </skill>
+    <skill type="1513">
+    	    <name>Missionary</name>
+	    <long>Jesuit Missionaries</long>
+	    <graphic>14</graphic>
+    </skill>
+    <skill type="1514">
+    	    <name>Preacher</name>
+	    <long>Firebrand Preachers</long>
+	    <graphic>15</graphic>
+    </skill>
+    <skill type="1515">
+    	    <name>Statesman</name>
+	    <long>Elder Statesmen</long>
+	    <graphic>16</graphic>
+    </skill>
+    <skill type="1516">
+    	    <name>Soldier</name>
+	    <long>Veteran Soldiers</long>
+	    <graphic>26</graphic>
+    </skill>
+    <skill type="1517">
+    	    <name>Instructor</name>
+	    <long>Expert Instructors</long>
+	    <graphic>19</graphic>
+    </skill>
+    <skill type="1518">
+    	    <name>Criminal</name>
+	    <long>Petty Criminals</long>
+	    <graphic>20</graphic>
+    </skill>
+    <skill type="1519">
+    	    <name>Servant</name>
+	    <long>Indentured Servants</long>
+	    <graphic>21</graphic>
+    </skill>
+    <skill type="1520">
+    	    <name>Scout</name>
+	    <long>Seasoned Scouts</long>
+	    <graphic>24</graphic>
+    </skill>
+    <skill type="1521">
+    	    <name>Sugar Farmer</name>
+	    <long>Expert Sugar Farmers</long>
+	    <graphic>48</graphic>
+    </skill>
+    <skill type="1522">
+    	    <name>Cotton Farmer</name>
+	    <long>Expert Cotton Farmers</long>
+	    <graphic>50</graphic>
+    </skill>
+    <skill type="1523">
+    	    <name>Tobacco Farmer</name>
+	    <long>Expert Tobacco Farmers</long>
+	    <graphic>49</graphic>
+    </skill>
+    <skill type="1524">
+    	    <name>Trapper</name>
+	    <long>Master Trappers</long>
+	    <graphic>51</graphic>
+    </skill>
+</skills>

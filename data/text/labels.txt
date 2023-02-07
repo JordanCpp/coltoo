@@ -1,0 +1,148 @@
+@Jobs
+None
+Ore Miner
+Lumberjack
+Armorer
+Silver Miner
+Hatter
+Sawyer
+Fisher
+Blacksmith
+Wheat Farmer
+Distiller
+Settler
+Tobacconist
+Clothmaker
+Missionary
+Preacher
+Statesman
+Soldier
+Cavalry
+Instructor
+Criminal
+Servant
+Colonist
+Explorer
+Sugar Farmer
+Tobacco Farmer
+Cotton Farmer
+Trapper
+@
+
+@Orders
+Activate Unit
+Wait for Next
+Fortify
+Sentry
+Plow Fields   (P)
+Build Road    (R)
+Clear Forest  (C)
+Build Colony  (B)
+No Orders
+Disband
+@
+
+@Game
+Game Options
+Colony Report Options
+Sound Options
+Pick Music
+Save Game
+Load Game
+Declare Independence
+Retire
+Exit to DOS
+@
+
+@View
+The Home Country
+The Colony Display
+@
+
+@Buy
+Artillery
+Caravel
+Merchantman
+Galleon
+Privateer
+Frigate
+@
+
+@BCost
+500
+1000
+2000
+3000
+2000
+5000
+@
+
+@JCost
+0
+600
+700
+850
+900
+950
+1000
+1000
+1050
+1100
+1100
+1200
+1200
+1300
+1400
+1500
+1900
+2000
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+@
+
+@Labels
+Game
+View
+Orders
+Reports
+Trade
+Assistance
+Q u i t
+Zoom Out
+Zoom In
+C
+P
+R
+B
+CDS
+HCS
+MAP
+Recruit
+Purchase
+Train
+G
+E
+Buy
+Hire
+Pay Transportation Cost
+Set Sail
+Auto
+Board
+Sailed
+Due Soon
+In Port
+Waiting on the Docks
+Under Orders
+Unassigned
+Transports
+@@
+
+@

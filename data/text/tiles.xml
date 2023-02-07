@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too tiles list version : 0.1-->
+<terrain>
+	<tiles>
+		<!-- @UNFORESTED -->
+		<tile type="unforest" name="Tundra" res="Game" move="1" defensive="0" improvement="4" value="2">
+			<production farmer="2" sugar="0" tabacco="0" cotton="0" furs="0" wood="0" ore="2" silver="0" fish="0"/>
+		</tile>
+		<tile type="unforest" name="Desert" res="Oasis" move="1" defensive="0" improvement="3" value="2">
+			<production farmer="1" sugar="0" tabacco="0" cotton="1" furs="0" wood="0" ore="1" silver="0" fish="0"/>
+		</tile>
+		<tile type="unforest" name="Plains" res="Wheat" move="1" defensive="0" improvement="3" value="4">
+			<production farmer="4" sugar="0" tabacco="0" cotton="2" furs="0" wood="0" ore="1" silver="0" fish="0"/>
+		</tile>
+		<tile type="unforest" name="Prairie" res="Prime Cotton" move="1" defensive="0" improvement="3" value="4">
+			<production farmer="2" sugar="0" tabacco="0" cotton="3" furs="0" wood="0" ore="0" silver="0" fish="0"/>
+		</tile>
+		<tile type="unforest" name="Grassland" res="Prime Tabacco" move="1" defensive="0" improvement="3" value="4">
+			<production farmer="2" sugar="0" tabacco="3" cotton="0" furs="0" wood="0" ore="0" silver="0" fish="0"/>
+		</tile>
+		<tile type="unforest" name="Savannah" res="Prime Sugar" move="1" defensive="0" improvement="3" value="4">
+			<production farmer="3" sugar="3" tabacco="0" cotton="0" furs="0" wood="0" ore="0" silver="0" fish="0"/>
+		</tile>
+		<tile type="unforest" name="Marsh" res="Depleted Mine" move="2" defensive="1" improvement="5" value="2">
+			<production farmer="2" sugar="0" tabacco="2" cotton="0" furs="0" wood="0" ore="2" silver="0" fish="0"/>
+		</tile>
+		<tile type="unforest" name="Swamp" res="Depleted Mine" move="2" defensive="1" improvement="7" value="2">
+			<production farmer="2" sugar="2" tabacco="0" cotton="0" furs="0" wood="0" ore="2" silver="0" fish="0"/>
+		</tile>
+		<!-- FORESTED -->
+		<tile type="forest" name="Boreal" becomes="Tundra" res="Game" move="2" defensive="2" improvement="4" value="3">
+			<production farmer="1" sugar="0" tabacco="0" cotton="0" furs="3" wood="2" ore="1" silver="0" fish="0"/>
+		</tile>
+		<tile type="forest" name="Scrub" becomes="Desert" res="Oasis" move="1" defensive="2" improvement="4" value="1">
+			<production farmer="1" sugar="0" tabacco="0" cotton="1" furs="2" wood="1" ore="1" silver="0" fish="0"/>
+		</tile>
+		<tile type="forest" name="Mixed" becomes="Plains" res="Beaver" move="2" defensive="2" improvement="4" value="3">
+			<production farmer="2" sugar="0" tabacco="0" cotton="1" furs="3" wood="3" ore="0" silver="0" fish="0"/>
+		</tile>
+		<tile type="forest" name="Broadleaf" becomes="Prairie" res="Deer" move="2" defensive="2" improvement="4" value="3">
+			<production farmer="1" sugar="0" tabacco="0" cotton="1" furs="2" wood="2" ore="0" silver="0" fish="0"/>
+		</tile>
+		<tile type="forest" name="Conifer" becomes="Grassland" res="Pine" move="2" defensive="2" improvement="4" value="3">
+			<production farmer="1" sugar="0" tabacco="1" cotton="0" furs="2" wood="2" ore="1" silver="0" fish="0"/>
+		</tile>
+		<tile type="forest" name="Tropical" becomes="Savannah" res="Prime Timber" move="2" defensive="2" improvement="6" value="3">
+			<production farmer="2" sugar="1" tabacco="0" cotton="0" furs="2" wood="2" ore="0" silver="0" fish="0"/>
+		</tile>
+		<tile type="forest" name="Wetland" becomes="Marsh" res="Depleted Mine" move="3" defensive="2" improvement="6" value="1">
+			<production farmer="1" sugar="0" tabacco="1" cotton="0" furs="2" wood="2" ore="1" silver="0" fish="0"/>
+		</tile>
+		<tile type="forest" name="Rain" becomes="Swamp" res="Depleted Mine" move="3" defensive="3" improvement="7" value="1">
+			<production farmer="1" sugar="1" tabacco="0" cotton="0" furs="1" wood="2" ore="1" silver="0" fish="0"/>
+		</tile>
+		<!-- @OTHER -->
+		<tile type="other" name="Arctic" move="2" defensive="0" improvement="4" value="0">
+			<production farmer="0" sugar="0" tabacco="0" cotton="0" furs="0" wood="0" ore="0" silver="0" fish="0"/>
+		</tile>
+		<tile type="other" name="Ocean" res="Fishery" move="1" defensive="0" improvement="2" value="3">
+			<production farmer="0" sugar="0" tabacco="0" cotton="0" furs="0" wood="0" ore="0" silver="0" fish="3"/>
+		</tile>
+		<tile type="other" name="Sea Lane" move="1" defensive="0" improvement="2" value="0">
+			<production farmer="0" sugar="0" tabacco="0" cotton="0" furs="0" wood="0" ore="0" silver="0" fish="3"/>
+		</tile>
+		<tile type="other" name="Mountains" res="Silver Deposit" move="3" defensive="6" improvement="7" value="2">
+			<production farmer="0" sugar="0" tabacco="0" cotton="0" furs="0" wood="0" ore="4" silver="1" fish="0"/>
+		</tile>
+		<tile type="other" name="Hills" res="Ore Deposit" move="2" defensive="4" improvement="4" value="2">
+			<production farmer="1" sugar="0" tabacco="0" cotton="0" furs="0" wood="0" ore="4" silver="0" fish="0"/>
+		</tile>
+	</tiles>
+	<resources>
+		<resource name="Depleted Mine" value="6" keep="4"/>
+		<resource name="Oasis" value="3" keep="-1"/>
+		<resource name="Wheat" value="4" keep="-1"/>
+		<resource name="Prime Cotton" value="6" keep="-1"/>
+		<resource name="Prime Tabacco" value="6" keep="-1"/>
+		<resource name="Prime Sugar" value="7" keep="-1"/>
+		<resource name="Minerals" value="4" keep="6"/>
+		<resource name="Fishery" value="5" keep="-1"/>
+		<resource name="Beaver" value="6" keep="-1"/>
+		<resource name="Game" value="6" keep="-10"/>
+		<resource name="Prime Timber" value="6" keep="-1"/>
+		<resource name="Pine" value="6" keep="6"/>
+		<resource name="Silver Deposit" value="12" keep="8"/>
+		<resource name="Ore Deposit" value="6" keep="6"/>
+	</resources>
+</terrain>

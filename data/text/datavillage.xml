@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ASCII" standalone="yes"?>
+<!-- Colonization too game village messages-->
+
+<villagemessagelist>
+	<message id="0">
+	<text>
+	What do you want here, Paleface?
+	We will cut your tongue out,
+	and scalp you with a rusty knife.
+	Never return to our lands!
+	</text>
+	</message>
+
+	<message id="1">
+	<text>
+	Welcome stranger from far away!
+	Enter our village in peace.
+	We'll tell you of the vast lands
+	that lay around our camp.
+	</text>
+	</message>
+
+	<message id="2">
+	<text>
+	Traveler,  you've journeyed far,
+	Take these gifts of silver, gold 
+	and turquoise back to your chief
+	as a sign of our friendship.
+	</text>
+	</message>
+
+	<message id="3">
+	<text>
+	Excellent timing pale stranger!
+	We were just about to have dinner
+	we prefer white meat, won't you 
+	step over to this stake?
+	</text>
+	</message>
+	
+	<message id="4">
+	<text>
+	You have violated our holy lands!
+	Death will be slow and painful.
+	We will stake you out in the sun
+	and let the ants eat you alive!
+	</text>
+	</message>
+
+	<message id="5">
+	<text>
+	We greet you with our hands open.
+	Let us smoke the pipe of peace.
+	Sit by the fire, join our council.
+	We have much to offer each other.
+	</text>
+	</message>
+
+	<message id="6">
+	<text>
+	Devil speak with forked tongue!
+	Your presence defiles our land,
+	We shall rip out your heart and
+	offer it to our gods!
+	</text>
+	</message>
+	
+	<message id="7">
+	<text>
+	Oh Great God from over the water!
+	Welcome to our humble village.
+	Let us shower you with gold and 
+	precious stones.
+	</text>
+	</message>
+
+</villagemessagelist>

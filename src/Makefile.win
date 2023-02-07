@@ -1,0 +1,168 @@
+# Project: coltoo
+# Based on Makefile created by Dev-C++ 4.9.8.0
+
+CPP  = "$(BINDIR)/g++.exe"
+CC   = "$(BINDIR)/gcc.exe"
+RES  = 
+OBJ  = bckgrnd.o blit.o CDSmouse.o colony.o deuro1.o deuro2.o deuro3.o deuro4.o display.o Drawcds1.o Drawcds2.o eventHandler.o falseterr.o font.o font2.o gameEngine.o globalData.o graphicsEngine.o hcs1.o HCSmouse.o initarrays.o kboard.o main.o makemask.o map.o message.o misc1.o mouse.o move.o orders1.o pixel.o player.o recenter.o terrain1.o tile.o tinystr.o tinyxml.o tinyxmlerror.o tinyxmlparser.o truetype.o unit.o zoom.o actor.o ai.o CDS1.o skill.o ColorData.o OptionList.o $(RES)
+LINKOBJ  = bckgrnd.o blit.o CDSmouse.o colony.o deuro1.o deuro2.o deuro3.o deuro4.o display.o Drawcds1.o Drawcds2.o eventHandler.o falseterr.o font.o font2.o gameEngine.o globalData.o graphicsEngine.o hcs1.o HCSmouse.o initarrays.o kboard.o main.o makemask.o map.o message.o misc1.o mouse.o move.o orders1.o pixel.o player.o recenter.o terrain1.o tile.o tinystr.o tinyxml.o tinyxmlerror.o tinyxmlparser.o truetype.o unit.o zoom.o actor.o ai.o CDS1.o skill.o ColorData.o OptionList.o $(RES)
+LIBS =  -L"$(BINDIR)/../lib" -lmingw32 -lSDLmain -lSDL -lSDL_ttf -lSDL_image -s 
+INCS =  -I"$(BINDIR)/../include"  -I"." 
+CXXINCS =  -I"$(BINDIR)/../include/c++"  -I"$(BINDIR)/../include/c++/mingw32"  -I"$(BINDIR)/../include/c++/backward"  -I"$(BINDIR)/../include"  -I"." 
+BIN  = ../coltoo.exe
+CXXFLAGS = $(CXXINCS) $(DBG) -fsave-memoized -fexpensive-optimizations -O3
+CFLAGS = $(INCS) $(DBG) -fsave-memoized -fexpensive-optimizations -O3
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../coltoo.exe all-after
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	$(CPP) $(LINKOBJ) -o "../coltoo.exe" $(LIBS)
+
+bckgrnd.o: bckgrnd.cpp
+	$(CPP) -c bckgrnd.cpp -o bckgrnd.o $(CXXFLAGS)
+
+blit.o: blit.cpp
+	$(CPP) -c blit.cpp -o blit.o $(CXXFLAGS)
+
+CDSmouse.o: CDSmouse.cpp
+	$(CPP) -c CDSmouse.cpp -o CDSmouse.o $(CXXFLAGS)
+
+colony.o: colony.cpp
+	$(CPP) -c colony.cpp -o colony.o $(CXXFLAGS)
+
+deuro1.o: deuro1.cpp
+	$(CPP) -c deuro1.cpp -o deuro1.o $(CXXFLAGS)
+
+deuro2.o: deuro2.cpp
+	$(CPP) -c deuro2.cpp -o deuro2.o $(CXXFLAGS)
+
+deuro3.o: deuro3.cpp
+	$(CPP) -c deuro3.cpp -o deuro3.o $(CXXFLAGS)
+
+deuro4.o: deuro4.cpp
+	$(CPP) -c deuro4.cpp -o deuro4.o $(CXXFLAGS)
+
+display.o: display.cpp
+	$(CPP) -c display.cpp -o display.o $(CXXFLAGS)
+
+Drawcds1.o: Drawcds1.cpp
+	$(CPP) -c Drawcds1.cpp -o Drawcds1.o $(CXXFLAGS)
+
+Drawcds2.o: Drawcds2.cpp
+	$(CPP) -c Drawcds2.cpp -o Drawcds2.o $(CXXFLAGS)
+
+eventHandler.o: eventHandler.cpp
+	$(CPP) -c eventHandler.cpp -o eventHandler.o $(CXXFLAGS)
+
+falseterr.o: falseterr.cpp
+	$(CPP) -c falseterr.cpp -o falseterr.o $(CXXFLAGS)
+
+font.o: font.cpp
+	$(CPP) -c font.cpp -o font.o $(CXXFLAGS)
+
+font2.o: font2.cpp
+	$(CPP) -c font2.cpp -o font2.o $(CXXFLAGS)
+
+gameEngine.o: gameEngine.cpp
+	$(CPP) -c gameEngine.cpp -o gameEngine.o $(CXXFLAGS)
+
+globalData.o: globalData.cpp
+	$(CPP) -c globalData.cpp -o globalData.o $(CXXFLAGS)
+
+graphicsEngine.o: graphicsEngine.cpp
+	$(CPP) -c graphicsEngine.cpp -o graphicsEngine.o $(CXXFLAGS)
+
+hcs1.o: hcs1.cpp
+	$(CPP) -c hcs1.cpp -o hcs1.o $(CXXFLAGS)
+
+HCSmouse.o: HCSmouse.cpp
+	$(CPP) -c HCSmouse.cpp -o HCSmouse.o $(CXXFLAGS)
+
+initarrays.o: initarrays.cpp
+	$(CPP) -c initarrays.cpp -o initarrays.o $(CXXFLAGS)
+
+kboard.o: kboard.cpp
+	$(CPP) -c kboard.cpp -o kboard.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+makemask.o: makemask.cpp
+	$(CPP) -c makemask.cpp -o makemask.o $(CXXFLAGS)
+
+map.o: map.cpp
+	$(CPP) -c map.cpp -o map.o $(CXXFLAGS)
+
+message.o: message.cpp
+	$(CPP) -c message.cpp -o message.o $(CXXFLAGS)
+
+misc1.o: misc1.cpp
+	$(CPP) -c misc1.cpp -o misc1.o $(CXXFLAGS)
+
+mouse.o: mouse.cpp
+	$(CPP) -c mouse.cpp -o mouse.o $(CXXFLAGS)
+
+move.o: move.cpp
+	$(CPP) -c move.cpp -o move.o $(CXXFLAGS)
+
+orders1.o: orders1.cpp
+	$(CPP) -c orders1.cpp -o orders1.o $(CXXFLAGS)
+
+pixel.o: pixel.cpp
+	$(CPP) -c pixel.cpp -o pixel.o $(CXXFLAGS)
+
+player.o: player.cpp
+	$(CPP) -c player.cpp -o player.o $(CXXFLAGS)
+
+recenter.o: recenter.cpp
+	$(CPP) -c recenter.cpp -o recenter.o $(CXXFLAGS)
+
+terrain1.o: terrain1.cpp
+	$(CPP) -c terrain1.cpp -o terrain1.o $(CXXFLAGS)
+
+tile.o: tile.cpp
+	$(CPP) -c tile.cpp -o tile.o $(CXXFLAGS)
+
+tinystr.o: tinystr.cpp
+	$(CPP) -c tinystr.cpp -o tinystr.o $(CXXFLAGS)
+
+tinyxml.o: tinyxml.cpp
+	$(CPP) -c tinyxml.cpp -o tinyxml.o $(CXXFLAGS)
+
+tinyxmlerror.o: tinyxmlerror.cpp
+	$(CPP) -c tinyxmlerror.cpp -o tinyxmlerror.o $(CXXFLAGS)
+
+tinyxmlparser.o: tinyxmlparser.cpp
+	$(CPP) -c tinyxmlparser.cpp -o tinyxmlparser.o $(CXXFLAGS)
+
+truetype.o: truetype.cpp
+	$(CPP) -c truetype.cpp -o truetype.o $(CXXFLAGS)
+
+unit.o: unit.cpp
+	$(CPP) -c unit.cpp -o unit.o $(CXXFLAGS)
+
+zoom.o: zoom.cpp
+	$(CPP) -c zoom.cpp -o zoom.o $(CXXFLAGS)
+
+actor.o: actor.cpp
+	$(CPP) -c actor.cpp -o actor.o $(CXXFLAGS)
+
+ai.o: ai.cpp
+	$(CPP) -c ai.cpp -o ai.o $(CXXFLAGS)
+
+CDS1.o: CDS1.cpp
+	$(CPP) -c CDS1.cpp -o CDS1.o $(CXXFLAGS)
+
+skill.o: skill.cpp
+	$(CPP) -c skill.cpp -o skill.o $(CXXFLAGS)
+
+ColorData.o: ColorData.cpp
+	$(CPP) -c ColorData.cpp -o ColorData.o $(CXXFLAGS)
+
+OptionList.o: OptionList.cpp
+	$(CPP) -c OptionList.cpp -o OptionList.o $(CXXFLAGS)
