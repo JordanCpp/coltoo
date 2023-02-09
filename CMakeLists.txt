@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.8)
 
 if (MSVC)
-  link_directories("dependencies/SDL2-2.24.0/lib/x86/"
-                   "dependencies/SDL2_image-2.6.2/lib/x86"
-                   "dependencies/SDL2_ttf-2.20.1/lib/x86")
+  link_directories("dependencies/SDL2-2.26.3/lib/x86/"
+                   "dependencies/SDL2_image-2.6.3/lib/x86"
+                   "dependencies/SDL2_ttf-2.20.2/lib/x86")
 
-  include_directories("dependencies/SDL2-2.24.0/include"
-                      "dependencies/SDL2_image-2.6.2/include"
-                      "dependencies/SDL2_ttf-2.20.1/include")
+  include_directories("dependencies/SDL2-2.26.3/include"
+                      "dependencies/SDL2_image-2.6.3/include"
+                      "dependencies/SDL2_ttf-2.20.2/include")
 endif()
 
 add_executable(colto
@@ -39,7 +39,6 @@ add_executable(colto
 "src/graphicsEngine.cpp"
 "src/hcs1.cpp"
 "src/HCSmouse.cpp"
-
 "src/kboard.cpp"
 "src/makemask.cpp"
 "src/map.cpp"
