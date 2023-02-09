@@ -190,7 +190,7 @@ GlobalData::~GlobalData()
 bool GlobalData::Init(void)
 {
     char buffer[255],filename[255];
-    short k,i,done=0,temp,num=0,k2=0;
+    int k,i,done=0,temp,num=0,k2=0;
     unsigned int temp0,temp1,temp2,temp3,temp4,temp5;
     FILE *fp = NULL;
     OptionList *opts = m_pGame->GetOptions();

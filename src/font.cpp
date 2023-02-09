@@ -45,7 +45,9 @@ void GraphicsEngine::drawString(SDL_Surface *screen, SDLFont *font,int x,int y,b
 	string tmpString = buffer;
 	
 	//Erase last char
-	tmpString = tmpString.erase(tmpString.size()-1,1);
+
+	if (tmpString.size() > 0)
+		tmpString = tmpString.erase(tmpString.size() - 1, 1);
 
 	if(shadow){
 		SDL_Color black = { 0x00, 0x00, 0x00, 0 };

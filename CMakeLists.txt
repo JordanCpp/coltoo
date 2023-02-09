@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
 
 if (MSVC)
+  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+
   link_directories("dependencies/SDL2-2.26.3/lib/x86/"
                    "dependencies/SDL2_image-2.6.3/lib/x86"
                    "dependencies/SDL2_ttf-2.20.2/lib/x86")
