@@ -6,6 +6,7 @@ if (MSVC)
                    "dependencies/SDL2_ttf-2.20.2/lib/x86")
 
   include_directories("dependencies/SDL2-2.26.3/include"
+                      "dependencies/SDL2-2.26.3/include/SDL2"
                       "dependencies/SDL2_image-2.6.3/include"
                       "dependencies/SDL2_ttf-2.20.2/include")
 endif()
