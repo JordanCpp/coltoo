@@ -1,5 +1,6 @@
 # New text
 I ported this project to SDL2. A complete refactoring of the project is required. The game is compiled.
+The project needs a complete refactoring.
 
 # Recent changes
 Added SDL2 support
@@ -19,3 +20,4 @@ Links:
 Sikon <sikon@godorok.net>
 
 ![0](screenshots/1.jpg)  
+![0](screenshots/2.jpg) 
