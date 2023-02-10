@@ -20,4 +20,4 @@ Links:
 Sikon <sikon@godorok.net>
 
 ![0](screenshots/1.jpg)  
-![0](screenshots/2.jpg) 
+![0](screenshots/2.png) 
