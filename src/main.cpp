@@ -53,7 +53,10 @@ int main(int argc, char* argv[])
     EventHandler SoundHandler(&globalData);
     SoundHandler.Init();
 
-    GameEngine colToo(&globalData, &optionList, map);
+    GraphicsEngine graphicsEngine(&globalData, &optionList, map);
+    graphicsEngine.Init();
+
+    GameEngine colToo(&graphicsEngine, &globalData, &optionList, map);
 
 #if defined(DEBUG) //&& defined(TEXTLOG) //log output to stdout.txt file
     freopen("./stdout.txt", "w", stdout);

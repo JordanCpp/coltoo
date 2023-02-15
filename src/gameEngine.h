@@ -55,7 +55,7 @@ class GameEngine    //Controls everything in the game
 public:
 
 //Constructor, destructor
-    GameEngine(GlobalData* globalData, OptionList* optionList, Map* map);
+    GameEngine(GraphicsEngine* graphicsEngine, GlobalData* globalData, OptionList* optionList, Map* map);
     ~GameEngine();
 
 //Methods
@@ -75,7 +75,6 @@ private:
     GraphicsEngine*   m_pGfxEngine;  //game Graphics engine
     Map*              m_pMap;        //global map
     OptionList*       m_pOptions;    //added 17/6; global game options
-    Actor*            m_pPlayer;     //player data
     Actor*            m_pAI[10];     //other nations and tribes
 };
 

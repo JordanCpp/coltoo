@@ -43,14 +43,12 @@
 // <<<
 
 //Constructor, destructor---------------------------------------------------------------//
-GameEngine::GameEngine(GlobalData* globalData, OptionList* optionList, Map* map) :
+GameEngine::GameEngine(GraphicsEngine* graphicsEngine, GlobalData* globalData, OptionList* optionList, Map* map) :
+    m_pGfxEngine(graphicsEngine),
     m_pData(globalData),
     m_pOptions(optionList),
     m_pMap(map)
 {
-    m_pGfxEngine = NULL;
-    m_pPlayer    = NULL;
-
     int i;
     for(i=0; i<10; i++)
     {
@@ -64,14 +62,6 @@ GameEngine::~GameEngine()
     cout<<"----------------"<<endl;
     cout<<"Game Ended"<<endl;
     #endif
-
-    if(m_pGfxEngine)
-    {
-        #ifdef DEBUG
-        cout<<"deleting Graphic Engine"<<endl;
-        #endif
-        delete m_pGfxEngine;
-    }
 
     #ifdef DEBUG
     cout<<"deleting AIs"<<endl;
