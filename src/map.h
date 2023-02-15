@@ -52,8 +52,8 @@ public:
     Map(int w,int h);
     ~Map();
 
-    static Map* loadMap(GameEngine *game, string fileName);
-    bool   Init(GameEngine *game);
+    static Map* loadMap(GlobalData* globalData, string fileName);
+    bool   Init(GlobalData* globalData);
 
     int    GetWidth()  { return width;  }
     int    GetHeight() { return height; }
@@ -74,11 +74,12 @@ public:
 
 
 private:
-    GameEngine*  m_pGame;
     int          height,width;
     Tile*        tiles[30000]; //shouldn't include a fixed size
                                //do it with a vector
     CTileTypes*  tileTypes;
+
+    GlobalData* _GlobalData;
 };
 
 #endif //MAP_H

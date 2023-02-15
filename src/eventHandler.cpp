@@ -30,13 +30,8 @@
 #include "eventHandler.h"
 #include "globalData.h"
 
-EventHandler::EventHandler()
-{
-	m_pGame = NULL;
-}
-
-EventHandler::EventHandler(GameEngine* game)
-: m_pGame(game)
+EventHandler::EventHandler(GlobalData* globalData) : 
+	_GlobalData(globalData)
 {
 }
 
@@ -53,7 +48,7 @@ bool EventHandler::Init(void)
 void EventHandler::Update(){
 
 	SDL_Event event;
-	GlobalData*		m_pData = m_pGame->GetData();
+	GlobalData* m_pData = _GlobalData;
 
 
 	while(SDL_WaitEvent(&event))

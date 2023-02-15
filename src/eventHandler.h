@@ -46,8 +46,7 @@ public:
 	void Update();
 
 //Constructor, destructor
-    EventHandler();
-	EventHandler(GameEngine* game);
+	EventHandler(GlobalData* globalData);
     ~EventHandler();
 
 //Methods
@@ -56,7 +55,7 @@ public:
 private:
 	void checkMouse(enum context cont,int x, int y);
 	void checkKeyBoard(enum context cont, int key);
-	GameEngine * m_pGame;
+	GlobalData* _GlobalData;
 };
 
 #endif //eventHandler_H

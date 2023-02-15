@@ -43,15 +43,13 @@
 // <<<
 
 //Constructor, destructor---------------------------------------------------------------//
-GameEngine::GameEngine()
+GameEngine::GameEngine(GlobalData* globalData, OptionList* optionList, Map* map) :
+    m_pData(globalData),
+    m_pOptions(optionList),
+    m_pMap(map)
 {
-    m_pData      = NULL;
-    m_pKeyb      = NULL;
-    m_pSound     = NULL;
     m_pGfxEngine = NULL;
-    m_pMap       = NULL;
     m_pPlayer    = NULL;
-    m_pOptions   = NULL;
 
     int i;
     for(i=0; i<10; i++)
@@ -66,54 +64,13 @@ GameEngine::~GameEngine()
     cout<<"----------------"<<endl;
     cout<<"Game Ended"<<endl;
     #endif
-    if(m_pData)
-    {
-        #ifdef DEBUG
-        cout<<"deleting Global Data"<<endl;
-        #endif
-        delete m_pData;
-    }
-    if(m_pKeyb)
-    {
-        #ifdef DEBUG
-        cout<<"deleting Keyboard system"<<endl;
-        #endif
-        delete m_pKeyb;
-    }
-    if(m_pSound)
-    {
-        #ifdef DEBUG
-        cout<<"deleting Sound system"<<endl;
-        #endif
-        delete m_pSound;
-    }
+
     if(m_pGfxEngine)
     {
         #ifdef DEBUG
         cout<<"deleting Graphic Engine"<<endl;
         #endif
         delete m_pGfxEngine;
-    }
-    if(m_pMap)
-    {
-        #ifdef DEBUG
-        cout<<"deleting Map"<<endl;
-        #endif
-        delete m_pMap;
-    }
-    /*if(m_pPlayer)
-    {
-        #ifdef DEBUG
-        cout<<"deleting Player"<<endl;
-        #endif
-        delete m_pPlayer;
-    }*/
-    if(m_pOptions)
-    {
-        #ifdef DEBUG
-        cout<<"deleting Options"<<endl;
-        #endif
-        delete m_pOptions;
     }
 
     #ifdef DEBUG
@@ -139,68 +96,10 @@ bool GameEngine::Init(int argc, char * argv[])
     #ifdef DEBUG
     cout<<"Creating GameEngine {"<<endl;
     #endif
-    m_pGfxEngine = new GraphicsEngine(this);
-    if(m_pGfxEngine)
-    {
-        #ifdef DEBUG
-        cout<<"  Creating Global Options"<<endl;
-        #endif
-        m_pOptions = new OptionList();
-        cout<<"  Options: ("<<m_pOptions->Opening()<<","<<m_pOptions->Splash()<<")"<<endl;
-        if(m_pOptions) 
-        {
-            //m_pOptions->OptionListInit();
-            bSuccess = true;
-        }
-        else bSuccess = false;
-    }
-    else bSuccess = false;
-
-    if(bSuccess)
-    {
-        #ifdef DEBUG
-        cout<<"  Creating Global Data"<<endl;
-        #endif
-        m_pData = new GlobalData;
-        if(m_pData) bSuccess &= m_pData->Init();
-        else bSuccess = false;
-    }
+    m_pGfxEngine = new GraphicsEngine(m_pData, m_pOptions, m_pMap);
     
     if(bSuccess) bSuccess &= m_pGfxEngine->Init();
     else bSuccess = false;
-
-    if(bSuccess)
-    {
-      #ifdef DEBUG
-      cout<<"  Creating Map"<<endl;
-      #endif
-//      m_pMap = new Map(); //shouldn't include a fixed size
-//                        //do it with a vector
-//      m_pMap->loadMap();
-      m_pMap = Map::loadMap(this, ""); //should read map size form map file
-      if(m_pMap) bSuccess &= m_pMap->Init(this);
-      else bSuccess = false;
-    }
-
-    if(bSuccess)
-    {
-      #ifdef DEBUG
-      cout<<"  Creating keyboard input"<<endl;
-      #endif
-      m_pKeyb = new EventHandler();
-      if(m_pKeyb) bSuccess &= m_pKeyb->Init();
-      else bSuccess = false;
-    }
-
-    if(bSuccess)
-    {
-      #ifdef DEBUG
-      cout<<"  Creating Sound system"<<endl;
-      #endif
-      m_pSound = new EventHandler();
-      if(m_pSound) bSuccess &= m_pSound->Init();
-      else bSuccess = false;
-    }
 
     /*if(bSuccess)
     {
@@ -754,18 +653,6 @@ void GameEngine::workIndian(void)
     m_pData->flag &= ~m_pData->VillageFlag;
 }
 
-Unit *GameEngine::FindUnitAt(long tile, bool isBoat)
-{
-    int i;
-    for(i = 0; i < m_pData->unitList.size(); i++)
-    {
-        if(m_pData->unitList[i]->getTile() == tile &&
-                m_pData->unitList[i]->isBoat() == isBoat)
-        return m_pData->unitList[i];
-    }
-    return NULL;
-}
-
 Unit *GameEngine::PlaceNewUnit(int unitID, int nation)
 {
     m_pData->unitList.push_back(Unit::loadUnitFile(unitID));
@@ -830,69 +717,6 @@ void GameEngine::UnitBoardShip(Unit *unit, Unit *ship)
     m_pMap->getTile(unit->getTile())->setFlags(TILE_UNIT, false);
     unit->setTile(ship->getTile());
     unit->setStartNumber(ship->getStartNumber());
-}
-
-void GameEngine::CombatAnalysis(Unit *attacker, Unit *defender)
-{
-    if(attacker->getNation() == m_pData->nation)
-    {
-        if(!(attacker->getAttack()))
-            m_pGfxEngine->MessageWindow(MSG_CANTATTACK);
-        else
-            m_pGfxEngine->MessageWindow(MSG_COMBAT);
-    }
-}
-
-Colony *GameEngine::PlaceColony(Unit *builder, long tile)
-{
-    Colony *col;
-    int *nameID;
-    string name;
-    bool isPort = (m_pMap->getTile(tile-151)->Is(TILE_WATER) ||
-        m_pMap->getTile(tile-150)->Is(TILE_WATER) ||
-        m_pMap->getTile(tile-149)->Is(TILE_WATER) ||
-        m_pMap->getTile(tile-1)->Is(TILE_WATER) ||
-        m_pMap->getTile(tile+1)->Is(TILE_WATER) ||
-        m_pMap->getTile(tile+149)->Is(TILE_WATER) ||
-        m_pMap->getTile(tile+150)->Is(TILE_WATER) ||
-        m_pMap->getTile(tile+151)->Is(TILE_WATER));
-        
-    col = new Colony(isPort);
-    m_pMap->PlaceRoad(tile);
-    m_pMap->getTile(tile)->setFlags(TILE_BUILD, true);
-    m_pData->colonies.push_back(col);
-    col->setNation(builder->getNation());
-    col->setTile(tile);
-    
-    nameID = &(m_pData->nextColName[col->getNation()]);
-    name = m_pData->colName[col->getNation()][*nameID];
-    col->setName(name);
-    (*nameID)++;
-        
-//TODO:    builder->joinColony(col);
-    return col;
-}
-
-Colony *GameEngine::FindColonyAt(long tile)
-{
-    int i;
-    for(i = 0; i < m_pData->colonies.size(); i++)
-    {
-        if(m_pData->colonies[i]->getTile() == tile)
-            return m_pData->colonies[i];
-    }
-    return NULL;
-}
-
-Colony *GameEngine::FindColonyOf(int nation)
-{
-    int i;
-    for(i = 0; i < m_pData->colonies.size(); i++)
-    {
-        if(m_pData->colonies[i]->getNation() == nation)
-            return m_pData->colonies[i];
-    }
-    return NULL;
 }
 
 Skill *GameEngine::FindSkill(int type)

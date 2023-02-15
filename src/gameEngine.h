@@ -55,7 +55,7 @@ class GameEngine    //Controls everything in the game
 public:
 
 //Constructor, destructor
-    GameEngine();
+    GameEngine(GlobalData* globalData, OptionList* optionList, Map* map);
     ~GameEngine();
 
 //Methods
@@ -63,19 +63,8 @@ public:
     bool GameLoop(void);
     void unitLoop();
 
-    GlobalData*		GetData()			{ return m_pData; }
-    Map*			GetMap()			{ return m_pMap;  }
-	GraphicsEngine*	GetGraphicsEngine()	{ return m_pGfxEngine;}
-	EventHandler*	GetEventHandler()	{ return m_pKeyb; }
-	OptionList*     GetOptions()        { return m_pOptions; } //added 17/6
-
-    Unit *FindUnitAt(long tile, bool isBoat);
     Unit *PlaceNewUnit(int unitID, int nation);
     void UnitBoardShip(Unit *unit, Unit *ship);
-    void CombatAnalysis(Unit *attacker, Unit *defender);
-    Colony *PlaceColony(Unit *builder, long tile);
-    Colony *FindColonyAt(long tile);
-    Colony *FindColonyOf(int nation);
     Skill *FindSkill(int type);
     
     bool workPlayer(Uint8 nation, int unit, int& done);
@@ -83,8 +72,6 @@ public:
 
 private:
     GlobalData*       m_pData;       //Globals
-    EventHandler*     m_pKeyb;       //Keyboard Handler
-    EventHandler*     m_pSound;      //Sound Handler
     GraphicsEngine*   m_pGfxEngine;  //game Graphics engine
     Map*              m_pMap;        //global map
     OptionList*       m_pOptions;    //added 17/6; global game options

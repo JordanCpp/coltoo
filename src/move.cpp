@@ -29,8 +29,8 @@
 /*---------------------------MoveUnit-----------------------------*/
 void GraphicsEngine::MoveUnit(unsigned char move)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
     short k;
 /*Checks to see if the move is legal
@@ -293,8 +293,8 @@ void GraphicsEngine::MoveUnit(unsigned char move)
 
 short GraphicsEngine::LegalTerrainCheck(const short sdir,const short mdir)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
     long mapnumold;
 
@@ -311,7 +311,7 @@ short GraphicsEngine::LegalTerrainCheck(const short sdir,const short mdir)
     if(map->getTile(data->mapnum)->Is(TILE_WATER) ||
          map->getTile(data->mapnum)->Is(TILE_RUMOR) ||
          map->getTile(data->mapnum)->Is(TILE_PEAK) ||
-         m_pGame->FindUnitAt(data->mapnum, false) ||
+         FindUnitAt(data->mapnum, false) ||
          map->getTile(data->mapnum)->Is(TILE_BUILD)) 
     {
       data->scrnum+=sdir;
@@ -336,7 +336,7 @@ short GraphicsEngine::LegalTerrainCheck(const short sdir,const short mdir)
 //if scout tries to move onto water  
   if(map->getTile(data->mapnum)->Is(TILE_WATER) && !(data->unitList[data->turn]->isBoat()))
   {
-   Unit *ship = m_pGame->FindUnitAt(data->mapnum, true);
+   Unit *ship = FindUnitAt(data->mapnum, true);
   
 //if not ship tile, no move  
     if(!ship || ship->getNation() != data->unitList[data->turn]->getNation())
@@ -380,7 +380,7 @@ short GraphicsEngine::LegalTerrainCheck(const short sdir,const short mdir)
     //if scout is on ship
     if(data->unitList[data->turn]->getNumberOfPassenger())
     {
-      Unit *tmp = m_pGame->FindUnitAt(data->mapnum - mdir, false); //added 26/6
+      Unit *tmp = FindUnitAt(data->mapnum - mdir, false); //added 26/6
       if(tmp) //can't unload passenger if dest tile is ocuppied by foreign unit
       {
         if(tmp->getNation()!=data->unitList[data->turn]->getNation()) return 1;
@@ -424,20 +424,20 @@ short GraphicsEngine::LegalTerrainCheck(const short sdir,const short mdir)
     data->mapnum+=mdir;
     data->flag|=data->NoMoveFlag;
 
-    m_pGame->CombatAnalysis(data->unitList[data->turn], NULL);
+    CombatAnalysis(data->unitList[data->turn], NULL);
     data->mf = 0;
     return 1;
   }
   
   Unit *temp;
-  if((temp = m_pGame->FindUnitAt(data->mapnum, data->unitList[data->turn]->isBoat())) &&
+  if((temp = FindUnitAt(data->mapnum, data->unitList[data->turn]->isBoat())) &&
    (temp->getNation() != data->unitList[data->turn]->getNation()))
   {
     data->scrnum+=sdir;
     data->mapnum+=mdir;
     data->flag|=data->NoMoveFlag;
     
-    m_pGame->CombatAnalysis(data->unitList[data->turn], temp);
+    CombatAnalysis(data->unitList[data->turn], temp);
     data->mf = 0;
     return 1;
   }
@@ -445,7 +445,7 @@ short GraphicsEngine::LegalTerrainCheck(const short sdir,const short mdir)
   if(map->getTile(data->mapnum)->Is(TILE_BUILD) &&
     !(data->unitList[data->turn]->isBoat()))
   {
-      Colony *col = m_pGame->FindColonyAt(data->mapnum);
+      Colony *col = FindColonyAt(data->mapnum);
       col->setNation(data->unitList[data->turn]->getNation());
       return 0;
   }

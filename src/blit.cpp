@@ -45,7 +45,7 @@ SDL_Surface* GraphicsEngine::ImageLoad(char *file)
 void GraphicsEngine::DrawTILE(SDL_Surface* to,SDL_Surface* from,int x,int y,
                               int w,int h,int x2,int y2)
 {
-    GlobalData * data = m_pGame->GetData();
+    GlobalData * data = _GlobalData;
 
     SDL_Rect dest;
     dest.x=x;
@@ -63,7 +63,7 @@ void GraphicsEngine::DrawTILE(SDL_Surface* to,SDL_Surface* from,int x,int y,
 /*copies a complete image onto another surface*/
 void GraphicsEngine::DrawSURF(SDL_Surface* to,SDL_Surface* from,int x,int y)
 {
-    GlobalData * data = m_pGame->GetData();
+    GlobalData * data = _GlobalData;
 
     SDL_Rect dest;
     dest.x = x;

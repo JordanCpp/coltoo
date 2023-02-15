@@ -29,6 +29,9 @@
 
 #include <iostream>
 #include "gameEngine.h"
+#include "globalData.h"
+#include "map.h"
+#include "eventHandler.h"
 #include <SDL.h>
 
 #ifdef DEBUG
@@ -37,7 +40,20 @@
 
 int main(int argc, char* argv[])
 {
-    GameEngine colToo;
+    OptionList optionList;
+    GlobalData globalData;
+    globalData.Init();
+
+    Map* map = Map::loadMap(&globalData, ""); //should read map size form map file
+    map->Init(&globalData);
+
+    EventHandler KeyboardHandler(&globalData);
+    KeyboardHandler.Init();
+
+    EventHandler SoundHandler(&globalData);
+    SoundHandler.Init();
+
+    GameEngine colToo(&globalData, &optionList, map);
 
 #if defined(DEBUG) //&& defined(TEXTLOG) //log output to stdout.txt file
     freopen("./stdout.txt", "w", stdout);

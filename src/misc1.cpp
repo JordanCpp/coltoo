@@ -26,7 +26,7 @@
 void GraphicsEngine::Buttons(int x1,int dx,int y1,int dy,int i,int x2,int y2,
                              int w,int h)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /*draw the button with label*/
     DrawTILE(screen,extra1,x1,y1,w,h,x2,y2);
 //    drawString(screen,font1,x1+dx,y1+dy,"%s",data->Labels[i]);
@@ -37,7 +37,7 @@ void GraphicsEngine::Buttons(int x1,int dx,int y1,int dy,int i,int x2,int y2,
 void GraphicsEngine::Buttons2(int x1,int dx,int y1,int dy,int i,int x2,int y2,
                               int x2b,int w,int h)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /*push and release a button*/
 
     /*if zoomed in use 'Zoom Out' label*/
@@ -53,7 +53,7 @@ void GraphicsEngine::Buttons2(int x1,int dx,int y1,int dy,int i,int x2,int y2,
 /*--------------------------UnitTerrainCheck----------------------*/
 void GraphicsEngine::UnitTerrainCheck(short turn)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /*if land draw the scout; if not, draw the ship.*/
 
     short pos;
@@ -93,7 +93,7 @@ void GraphicsEngine::UnitTerrainCheck(short turn)
 /*--------------------------SetGrid-------------------------------*/
 void GraphicsEngine::SetGrid(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /*depresses or releases the grid button 'G'.
       Also sets the grid flag to tell the SetTerrain3() function to 
       draw the grid.*/
@@ -121,7 +121,7 @@ void GraphicsEngine::SetGrid(void)
 /*--------------------------ScreenUpdate--------------------------*/
 void GraphicsEngine::ScreenUpdate(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /*calls SetTerrain() and updates the screen.
       Updates the bck1 surface (where the unit is), 
       and then places the unit on the screen.*/
@@ -142,7 +142,7 @@ void GraphicsEngine::ScreenUpdate(void)
 void GraphicsEngine::RemoveExtraSpaceH(SDL_Surface *from,int x,int y,
                                        int w,int h)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /*find the true width of the graphic,
       instead of just the tile size.*/
 
@@ -179,7 +179,7 @@ void GraphicsEngine::RemoveExtraSpaceH(SDL_Surface *from,int x,int y,
 void GraphicsEngine::RemoveExtraSpaceV(SDL_Surface *from,int x,int y,
                                        int w,int h)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /*find the true heighth of the graphic,
       instead of just the tile size.*/
 
@@ -238,7 +238,7 @@ int GraphicsEngine::RemoveExtraSpaceH2(SDL_Surface *from,int x,int y,
 void GraphicsEngine::Buttons3(SDL_Surface *font,int x1,int dx,int y1,int dy,
                               int i,int x2,int y2,int w,int h)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /* buttons useing SoLfont*/
 
     int swidth;
@@ -252,7 +252,7 @@ void GraphicsEngine::Buttons3(SDL_Surface *font,int x1,int dx,int y1,int dy,
 void GraphicsEngine::Buttons4(SDL_Surface *font,int x1,int dx,int y1,int dy,
                               int i,int x2,int y2,int x2b,int w,int h)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /* buttons useing SoLfont*/
 
     if(i==7&&data->zl==0){i=8;}
@@ -267,7 +267,7 @@ void GraphicsEngine::Buttons4(SDL_Surface *font,int x1,int dx,int y1,int dy,
 /*---------------------------UpdateGold---------------------------*/
 void GraphicsEngine::UpdateGold(char scr)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     long gold = data->playerlist[data->nation]->getGold(); //added 16/6
     /*updates the gold total.*/
 
@@ -340,7 +340,7 @@ void GlobalData::ShipCharacteristics(short type)
 /*-------------------------SubtractGold---------------------------*/
 void GraphicsEngine::SubtractGold(int cost)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     long gold = data->playerlist[data->nation]->getGold(); //added 16/6
     data->playerlist[data->nation]->setGold(gold-cost);
     UpdateGold(0);
@@ -350,7 +350,7 @@ void GraphicsEngine::SubtractGold(int cost)
 /*-------------------------CheckMouseButton-----------------------*/
 char GraphicsEngine::CheckMouseButton(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     /*see if the left mouse button was released.*/
 
     SDL_PollEvent(&data->event);
@@ -365,7 +365,7 @@ void GraphicsEngine::NationBox(int x, int y, Uint8 nation, short pos,
 {
 //places nationality box next to unit
 
-  GlobalData* data = m_pGame->GetData();
+  GlobalData* data = _GlobalData;
   short bx, by, r, g, b;
   char letter[2] = { 0, 0 };
   
@@ -389,7 +389,7 @@ void GraphicsEngine::NationBox(int x, int y, Uint8 nation, short pos,
 void GraphicsEngine::NationColors(Uint8 nation, short& r, short& g, short& b)
 {
 //    int nationID = (int) nation;  // For what? You don't need a direct cast - Sikon
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     if(nation < data->playerlist.size())
     {
         r = data->playerlist[nation]->Color->Red();

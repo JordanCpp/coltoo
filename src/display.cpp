@@ -30,8 +30,8 @@
 
 void GraphicsEngine::DrawScene(void)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
     int dx,dy,steps=25,i,x,y,x1,y1;
     long mapnumold;
@@ -137,9 +137,9 @@ void GraphicsEngine::Reveal(void)
       Then, if the tile was shrouded it becomes partially shrouded
       If partially shrouded it becomes revealed*/
 
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     Uint8 n = data->nationTurn;
-    Map* map = m_pGame->GetMap();
+    Map* map = _Map;
 
     if(data->mapnum-302>-1 &&
        map->getTile(data->mapnum-302)->getXPos() <
@@ -335,8 +335,8 @@ void GraphicsEngine::Reveal(int x, int y, int radius)
   unit's position (no 'wrap around')
   Then, if the tile was shrouded it becomes partially shrouded
   If partially shrouded it becomes revealed*/
-  GlobalData *data = m_pGame->GetData();
-  Map* map = m_pGame->GetMap();
+  GlobalData *data = _GlobalData;
+  Map* map = _Map;
 
 // Test to see if coordinates are legit
   if(x<0 || x>=map->GetWidth() || y<0 || y>=map->GetHeight()) return;
@@ -385,7 +385,7 @@ void GraphicsEngine::BlinkUnit(Unit* theUnit, long &LastUpdate, bool &blink, boo
 {
   short Speed=432;
 
-  GlobalData* data = m_pGame->GetData();
+  GlobalData* data = _GlobalData;
 
   if(LastUpdate+Speed<SDL_GetTicks())
   {
@@ -425,7 +425,7 @@ void GraphicsEngine::BlinkUnit(Unit* theUnit, long &LastUpdate, bool &blink, boo
 
 void GraphicsEngine::SlideUnit(Unit *unit, short newloc, short oldloc)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     int dx,dy,steps=25,i,x,y,x1,y1;
     short box = 0,pos;
     int icon = unit->getGraphic();

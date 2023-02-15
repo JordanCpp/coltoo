@@ -25,7 +25,7 @@
 /*---------------------------DrawMarket1----------------------------*/
 void GraphicsEngine::DrawMarket1(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     int x,/*y,*/x1,i,swidth,x0,y0;
 
     x0=166;y0=676;
@@ -56,7 +56,7 @@ void GraphicsEngine::DrawMarket1(void)
 /*---------------------------HCSButtons----------------------------*/
 void GraphicsEngine::HCSButtons(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int x,/*y,i,*/x1,y1,swidth;
 
@@ -85,7 +85,7 @@ void GraphicsEngine::HCSButtons(void)
 /*---------------------------HCSDRecruit----------------------------*/
 void GraphicsEngine::HCSDRecruit(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int i,x1=3,y1=3,swidth;
 
@@ -106,7 +106,7 @@ void GraphicsEngine::HCSDRecruit(void)
 /*---------------------------HCSDPurchase--------------------------*/
 void GraphicsEngine::HCSDPurchase(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int /*x,y,i,*/x1=3,y1=3,swidth;
 
@@ -130,7 +130,7 @@ void GraphicsEngine::HCSDPurchase(void)
 /*---------------------------HCSDTrain----------------------------*/
 void GraphicsEngine::HCSDTrain(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int /*x,y,i,*/x1=3,y1=3,swidth;
 
@@ -154,7 +154,7 @@ void GraphicsEngine::HCSDTrain(void)
 /*---------------------------HCSDRecruitHL--------------------------*/
 void GraphicsEngine::HCSDRecruitHL(short recruitHL)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int r1=32,g1=120,b1=48,r2=16,g2=80,b2=32,x1=3,y1=3/*,length,dx*/,x,i,swidth;
 
@@ -215,7 +215,7 @@ void GraphicsEngine::HCSDRecruitHL(short recruitHL)
 void GraphicsEngine::HCSDNewUnitHL(short newunitHL,SDL_Surface *temp,int Ustart,
                     char array1[][25],char array2[][25],char TorP)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int r1=32,g1=120,b1=48,r2=16,g2=80,b2=32,x1=3,y1=3,/*length,*/swidth,x,i;
 

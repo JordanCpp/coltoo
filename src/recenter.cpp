@@ -26,8 +26,8 @@
 /*---------------------------ReCenter-----------------------------*/
 void GraphicsEngine::ReCenter(void)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
 /*Recenters the unit with checks to see if the map edge or corners 
   have been reached.*/
@@ -112,8 +112,8 @@ void GraphicsEngine::ReCenter(void)
 /*---------------------------ReCenter-----------------------------*/
 void GraphicsEngine::ReCenter(int x, int y)
 {
-  GlobalData* data = m_pGame->GetData();
-  Map* map = m_pGame->GetMap();
+  GlobalData* data = _GlobalData;
+  Map* map = _Map;
 
   //update the start tile, checking map borders.
   if(x < 0 || x >= map->GetWidth() || y<0 || y>= map->GetHeight())

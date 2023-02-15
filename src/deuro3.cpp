@@ -25,7 +25,7 @@
 /*---------------------------SelectedShip1------------------------*/
 void GraphicsEngine::SelectedShip1(void)
 {
-  GlobalData *data = m_pGame->GetData();
+  GlobalData *data = _GlobalData;
 
   int x0=392,y0=478,swidth;
 
@@ -67,7 +67,7 @@ void GraphicsEngine::SelectedShip1(void)
 /*---------------------------RecruitSelection1-------------------*/
 int GraphicsEngine::RecruitSelection1(void)
 {
-  GlobalData* data = m_pGame->GetData();
+  GlobalData* data = _GlobalData;
 
   int k,fudge=0;
 
@@ -105,7 +105,7 @@ int GraphicsEngine::RecruitSelection1(void)
 /*---------------------------SelectedShipName---------------------*/
 void GraphicsEngine::SelectedShipName(int num,char flag)
 {
-  GlobalData* data = m_pGame->GetData();
+  GlobalData* data = _GlobalData;
 
   int x0=392,y0=478,dx=0,dx2=0;
   float k;
@@ -158,7 +158,7 @@ void GraphicsEngine::SelectedShipName(int num,char flag)
 /*------------------------SelectedShipPassengers--------------------*/
 int GraphicsEngine::SelectedShipPassengers(short n,char m)
 {
-  GlobalData* data = m_pGame->GetData();
+  GlobalData* data = _GlobalData;
 
   int SSx=410,SSy=535,SSxx,i,w,bx,www,dx,a;
 
@@ -200,7 +200,7 @@ int GraphicsEngine::SelectedShipPassengers(short n,char m)
 void GraphicsEngine::ShipsInPortDisplay(int x,int y1,char start,char index,
                           char array[],short array2[])
 {
-  GlobalData* data = m_pGame->GetData();
+  GlobalData* data = _GlobalData;
 
   int xx,w,ii,bx,www,dx,w2;
 //  char a;
@@ -253,7 +253,7 @@ void GraphicsEngine::ShipsInPortDisplay(int x,int y1,char start,char index,
 void GraphicsEngine::DocksWaitingDisplay(int x,int y1,char start,char index,
                           char array[])
 {
-  GlobalData* data = m_pGame->GetData();
+  GlobalData* data = _GlobalData;
 
   int xx,w,ii,bx,www,dx,dh;
 
@@ -295,7 +295,7 @@ void GraphicsEngine::DocksWaitingDisplay(int x,int y1,char start,char index,
 /*------------------------SelectedShipCargo------------------------*/
 void GraphicsEngine::SelectedShipCargo(short n,char m,int a)
 {
-  GlobalData* data = m_pGame->GetData();
+  GlobalData* data = _GlobalData;
 
   int SSx=410,SSy=604,SSxx,i,w;
 

@@ -28,8 +28,8 @@
 /*---------------------------Orders----------------------------*/
 void GraphicsEngine::Orders(int i)  //in Unit class??
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
 /*  Check to see if the tile to be plowed is already plowed,
     or if the tile to get a colony already has a colony, etc.
@@ -105,7 +105,7 @@ void GraphicsEngine::Orders(int i)  //in Unit class??
 //assigns a new colony a number and stores its location            
 //        data->colony[data->colonyCount].colonyLoc=data->mapnum;
 //        data->colonyCount++;            
-          Colony *col = m_pGame->PlaceColony(data->unitList[data->turn], data->mapnum);        
+          Colony *col = PlaceColony(data->unitList[data->turn], data->mapnum);        
           ScreenUpdate();
           
           if(data->unitList[data->turn]->getNation() == data->nation)

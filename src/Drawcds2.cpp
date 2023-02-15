@@ -26,8 +26,8 @@
 /*---------------------------FillSlots1-------------------------*/
 void GraphicsEngine::FillSlots1(int colnum)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
 
     int y,k,i,b[18],a=0,x0=256,y0=34;
@@ -75,8 +75,8 @@ void GraphicsEngine::FillSlots1(int colnum)
 /*---------------------------DrawCDSFields2----------------------*/
 void GraphicsEngine::DrawCDSFields2(long tile)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     Uint8 nt = data->nationTurn;
 
     long m,n[9][4],r,rblend,bblend,cblend,rii,bii,cii,k,kx,ky;
@@ -512,8 +512,8 @@ void GraphicsEngine::DrawCDSFields2(long tile)
 //void GraphicsEngine::Links2(long ii,int e,long n[][4],int x0,int y0,int i)
 void GraphicsEngine::Links2(long ii,enum tileTypes e,long n[][4],int x0,int y0,int i)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     Uint8 nt = data->nationTurn;
 
     int xx=0,yy=0;
@@ -665,8 +665,8 @@ void GraphicsEngine::Links2(long ii,enum tileTypes e,long n[][4],int x0,int y0,i
 /*--------------------------DrawRoad2----------------------------*/
 void GraphicsEngine::DrawRoad2(long kx,long ky,int x,long num)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     Uint8 nt = data->nationTurn;
 
     if(!(map->getTile(num)->Is(TILE_FAKE)))
@@ -684,8 +684,8 @@ void GraphicsEngine::DrawRoad2(long kx,long ky,int x,long num)
 /*--------------------------DrawRiver----------------------------*/
 void GraphicsEngine::DrawRiver(long kx,long ky,int x,long num, int mouth)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     Uint8 nt = data->nationTurn;
 
     if(!(map->getTile(num)->Is(TILE_FAKE)))

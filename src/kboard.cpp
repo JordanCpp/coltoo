@@ -28,8 +28,8 @@
 /*---------------------------KeyBoard-----------------------------*/
 int GraphicsEngine::KeyBoard(int k)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     unsigned char move;
 
   if(k==SDLK_ESCAPE){return 1;}

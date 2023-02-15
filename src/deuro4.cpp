@@ -25,7 +25,7 @@
 /*---------------------------Counter1-----------------------------*/
 void GraphicsEngine::Counter1(SDL_Surface *temp,int x,int y)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     FillRect(temp,x,y,64,116,48,48,48);
     FillRect(temp,x+46,y+79,12,26,191,112,32);
@@ -52,7 +52,7 @@ void GraphicsEngine::Counter1(SDL_Surface *temp,int x,int y)
 /*---------------------------Counter2-----------------------------*/
 void GraphicsEngine::Counter2(char num,char counterspace,int x,int y)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     char x1,x2,x3,x4;
 
@@ -87,7 +87,7 @@ void GraphicsEngine::Counter2(char num,char counterspace,int x,int y)
 /*---------------------------Counter3-----------------------------*/
 char GraphicsEngine::Counter3(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     if(data->counter<10){return 14;}
     if(data->counter>99){return 0;}
@@ -97,7 +97,7 @@ char GraphicsEngine::Counter3(void)
 /*---------------------------Counter4-----------------------------*/
 void GraphicsEngine::Counter4(int x,int y,char counterspace)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     FillRect(screen,x+5,y+82,41,20,225,225,225);
     drawString3(screen,data->SoLfont1[0],x+17+counterspace,y+88,0,0,0,

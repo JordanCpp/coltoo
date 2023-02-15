@@ -29,8 +29,8 @@
 /*---------------------------MessageWindow-----------------------*/
 void GraphicsEngine::MessageWindow(int k)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     int xM,yM,swidth,x0,y0;
 	string text;
 
@@ -192,8 +192,8 @@ void GraphicsEngine::MessageWindow(int k)
 /*---------------------------RemoveRumor--------------------------*/
 void GraphicsEngine::RemoveRumor(void)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     /*Clear the rumor flag for the tile
       Replace the unit icon with stored background
       Redraw the display (SetTerrain)
@@ -507,8 +507,8 @@ void GraphicsEngine::DisplayMessage(string text,SDLFont *font,SDL_Surface* surf,
 
 void GraphicsEngine::ShowSysMessage(int message)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
     string text = data->msg->GetSysMessage(message);
     DisplayMessage(text, fontInformation);

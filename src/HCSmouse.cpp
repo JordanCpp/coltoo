@@ -23,7 +23,7 @@
 /*---------------------------HCSMouseCheck-----------------------*/
 int GraphicsEngine::HCSMouseCheck(int xM,int yM,char RFlag)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
 int x,y,x1,x0=640,y0=244,i,/*dx,*/y1,w,/*ii,xx,*/cost,/*swidth,*/k,bckgds[2],
     xMold=0,yMold=0,SSCa;
@@ -855,7 +855,7 @@ x=643;y1=368;
 /*---------------------------HCSMouseOverSort--------------------*/
 void GraphicsEngine::HCSMouseOverSort(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
 int xM,yM,x0=640,y0=244,HLCheck[3]={-2,-2,-2};
 SDL_Surface *temp;

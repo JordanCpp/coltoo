@@ -25,7 +25,7 @@
 /*---------------------------DrawDocks1---------------------------*/
 void GraphicsEngine::DrawDocks1(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int x0=10,y0=196,/*dx,*/swidth;
 
@@ -113,7 +113,7 @@ void GraphicsEngine::DrawDocks1(void)
 int GraphicsEngine::PlaceNUDocks1(int x,int y1,char &Zstart,char ZIndex,
                     char Zarray[],SDL_Surface *temp)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int /*i,*/w,ii,xx,w2=0,bx=0,w3=0,dx,bx2=0,w4=0,dx2=0;
 
@@ -184,7 +184,7 @@ void GraphicsEngine::PTArrowShift(short &Zstart,char &ZHL,int i,int ii,
                   char TorP,int x0,int y0,int w,int h,char limit,
                   char dz,char newhl)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     Zstart=Zstart+dz;ZHL=newhl;data->HLCheckOld[i]=-1;
 
     if(dz<0){if(Zstart<limit){Zstart=limit;}}
@@ -216,7 +216,7 @@ void GraphicsEngine::BuyHireButton(char &ZIndex,char &Zstart,char array[],int x,
 int GraphicsEngine::PlaceNUDocks2(int x,int y1,char &Zstart,char ZIndex,
                     char Zarray[],SDL_Surface *temp,short n)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int /*i,*/w,ii,xx,w2=0,bx=0,w3=0,dx,bx2=0,w4=0,dx2=0,w5;
 

@@ -26,7 +26,7 @@
 /*---------------------------Zoom1-------------------------------*/
 void GraphicsEngine::Zoom1(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     if(!data->zl)
     {
@@ -47,8 +47,8 @@ void GraphicsEngine::Zoom1(void)
 /*---------------------------MiniMap------------------------------*/
 void GraphicsEngine::MiniMap(void)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
     int x,y,k,x0,y0,x2,y2,step,xoffset,yoffset,s;
     long i,mapold;

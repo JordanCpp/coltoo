@@ -29,8 +29,8 @@
 /*--------------------------SetTerrain----------------------------*/
 void GraphicsEngine::SetTerrain(void)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     short x,y,rr;
     long ii;
 
@@ -90,8 +90,8 @@ void GraphicsEngine::SetTerrain(void)
 /*--------------------------SetTerrain2---------------------------*/
 void GraphicsEngine::SetTerrain2(void)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     int rr,i;
     long ii;
 
@@ -234,8 +234,8 @@ void GraphicsEngine::SetTerrain2(void)
 /*--------------------------SetTerrain3----------------------------*/
 void GraphicsEngine::SetTerrain3(void)
 {
-  GlobalData* data = m_pGame->GetData();
-  Map* map = m_pGame->GetMap();
+  GlobalData* data = _GlobalData;
+  Map* map = _Map;
   short x,y,rr,i,rowmax=14,colmax=11,pos;
   int icon;
   long ii;
@@ -404,7 +404,7 @@ void GraphicsEngine::SetTerrain3(void)
                 //Colonies
                 if(map->getTile(ii + x)->Is(TILE_BUILD))
                 {
-                    Colony *col = m_pGame->FindColonyAt(ii + x);
+                    Colony *col = FindColonyAt(ii + x);
                     if(rr < 11)
                     {
                         DrawTILE(screen,tilesheet1,data->stile[rr][XPOS]-3,
@@ -479,7 +479,7 @@ void GraphicsEngine::SetTerrain3(void)
         
         if(tile->Is(TILE_BUILD) && tile->getShrdstate(data->nationTurn) != SHROUD_FULL)
         {
-          char *colName = (char *)m_pGame->FindColonyAt(ii + x)->getName().c_str();
+          char *colName = (char *)FindColonyAt(ii + x)->getName().c_str();
 
           TTF_SizeText(fontColNameMap->font,(char *)text.c_str(),&renderW,&renderH);
 
@@ -623,8 +623,8 @@ void GraphicsEngine::SetTerrain3(void)
 /*--------------------------DrawRoad----------------------------*/
 void GraphicsEngine::DrawRoad(int rr,int x,long num)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     if(!(map->getTile(num)->Is(TILE_FAKE)))
     {
         if(rr<11)
@@ -661,8 +661,8 @@ void GraphicsEngine::DrawRoad(int rr,int x,long num)
 //void GraphicsEngine::Links1(long ii,int e,int sn)
 void GraphicsEngine::Links1(long ii,enum tileTypes e,int sn)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
 /*  This function can be used to place those overlays that have
     'connections' (other than the roads)
@@ -1126,8 +1126,8 @@ void GraphicsEngine::Links1(long ii,enum tileTypes e,int sn)
 /*--------------------------Rivers1-----------------------------*/
 Uint8 GraphicsEngine::Rivers1(long ii)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
     Uint8 riverLinks=0;
 
 /*Sets the 'connections' for River*/

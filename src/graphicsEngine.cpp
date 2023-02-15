@@ -39,31 +39,15 @@
 #include "skill.h"
 // <<<
 #include "OptionList.h"
+#include "colony.h"
 
 using namespace std;
 
-GraphicsEngine::GraphicsEngine()
-{
-    m_pGame = NULL;
-    fullScreen = false;
-    screenResX = -1;
-    screenResY = -1;
+GraphicsEngine::GraphicsEngine(GlobalData* globalData, OptionList* optionList, Map* map) :
+    _GlobalData(globalData),
+    _OptionList(optionList),
+    _Map(map)
 
-    icon = screen = tilesheet1 = blender = tilesheetF = forestmask = NULL;
-    tilesheetM = tilesheetR = extra1 = bck1 = mapback = mapsurf = NULL;
-    shrd = pshrd = blender2 = messageold = messagenew = mask1 = Mmask = NULL;
-    Rmask = map1 = cds1 = hcs1 = scrllbutup = scrllbutdwn = scrllbutbck = NULL;
-    unitsS = uniticons = activebck = loadedbck = buildings1 = NULL;
-    HCSWin[0] = HCSWin[1] = HCSWin[2] = HCSWin[3] = HCSWin[4] = NULL;
-
-    tilesheetR3 = R3mask = NULL;
-
-//added 6/1 2 new fonts
-	  fontPushButtons = fontInformation = fontColNameCDS = fontColNameMap = NULL;
-}
-
-GraphicsEngine::GraphicsEngine(GameEngine* game)
-: m_pGame(game)
 {
     fullScreen = false;
     screenResX = -1;
@@ -198,8 +182,8 @@ GraphicsEngine::~GraphicsEngine()
 
 bool GraphicsEngine::Init(void)
 {
-    GlobalData* data = m_pGame->GetData();
-    OptionList* opts = m_pGame->GetOptions();
+    GlobalData* data = _GlobalData;
+    OptionList* opts = _OptionList;
 
     #ifdef DEBUG
     cout<<"  Initializing GraphicsEngine"<<endl;
@@ -311,7 +295,7 @@ bool GraphicsEngine::Init(void)
 
 bool GraphicsEngine::splash()
 {
-    OptionList* opts = m_pGame->GetOptions();
+    OptionList* opts = _OptionList;
 
     #ifdef DEBUG
     cout<<"    Opening title: "<<opts->Opening()<<endl;
@@ -395,7 +379,7 @@ bool GraphicsEngine::drawMap(Map m,int centerX,int centerY)
 */
 bool GraphicsEngine::InitImages()
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     tilesheet1  = ImageLoad("data/graphics/tsheet1.png");
     if(!tilesheet1)
@@ -623,7 +607,7 @@ bool GraphicsEngine::IsOnScreen(int x, int y)
 
 void GraphicsEngine::UpdateUnitInfo(Unit *unit)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     #ifdef DEBUG
     cout<<data->playerlist[unit->getNation()]->country.abbrev<<unit->getName().c_str()<<endl;
@@ -645,6 +629,80 @@ void GraphicsEngine::UpdateUnitInfo(Unit *unit)
     }
 }
 
+Unit* GraphicsEngine::FindUnitAt(long tile, bool isBoat)
+{
+    int i;
+    for (i = 0; i < _GlobalData->unitList.size(); i++)
+    {
+        if (_GlobalData->unitList[i]->getTile() == tile &&
+            _GlobalData->unitList[i]->isBoat() == isBoat)
+            return _GlobalData->unitList[i];
+    }
+    return NULL;
+}
+
+Colony* GraphicsEngine::PlaceColony(Unit* builder, long tile)
+{
+    Colony* col;
+    int* nameID;
+    string name;
+    bool isPort = (_Map->getTile(tile - 151)->Is(TILE_WATER) ||
+        _Map->getTile(tile - 150)->Is(TILE_WATER) ||
+        _Map->getTile(tile - 149)->Is(TILE_WATER) ||
+        _Map->getTile(tile - 1)->Is(TILE_WATER) ||
+        _Map->getTile(tile + 1)->Is(TILE_WATER) ||
+        _Map->getTile(tile + 149)->Is(TILE_WATER) ||
+        _Map->getTile(tile + 150)->Is(TILE_WATER) ||
+        _Map->getTile(tile + 151)->Is(TILE_WATER));
+
+    col = new Colony(isPort);
+    _Map->PlaceRoad(tile);
+    _Map->getTile(tile)->setFlags(TILE_BUILD, true);
+    _GlobalData->colonies.push_back(col);
+    col->setNation(builder->getNation());
+    col->setTile(tile);
+
+    nameID = &(_GlobalData->nextColName[col->getNation()]);
+    name = _GlobalData->colName[col->getNation()][*nameID];
+    col->setName(name);
+    (*nameID)++;
+
+    //TODO:    builder->joinColony(col);
+    return col;
+}
+
+Colony* GraphicsEngine::FindColonyAt(long tile)
+{
+    int i;
+    for (i = 0; i < _GlobalData->colonies.size(); i++)
+    {
+        if (_GlobalData->colonies[i]->getTile() == tile)
+            return _GlobalData->colonies[i];
+    }
+    return NULL;
+}
+
+Colony* GraphicsEngine::FindColonyOf(int nation)
+{
+    int i;
+    for (i = 0; i < _GlobalData->colonies.size(); i++)
+    {
+        if (_GlobalData->colonies[i]->getNation() == nation)
+            return _GlobalData->colonies[i];
+    }
+    return NULL;
+}
+
+void GraphicsEngine::CombatAnalysis(Unit* attacker, Unit* defender)
+{
+    if (attacker->getNation() == _GlobalData->nation)
+    {
+        if (!(attacker->getAttack()))
+            MessageWindow(MSG_CANTATTACK);
+        else
+            MessageWindow(MSG_COMBAT);
+    }
+}
 
 //
 // $Id: graphicsEngine.cpp,v 1.24 2004/06/23 15:37:05 sikon Exp $

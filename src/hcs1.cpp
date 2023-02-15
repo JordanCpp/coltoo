@@ -39,7 +39,7 @@ void GraphicsEngine::DrawHCS(void)
 /*----------------------HCSRadioButtons1-------------------*/
 void GraphicsEngine::HCSRadioButtons1(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     int x1=643,y1=222,swidth,x0=640,y0=244;
 
   if(data->HCSradio1==0)

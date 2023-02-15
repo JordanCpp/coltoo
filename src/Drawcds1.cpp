@@ -46,7 +46,7 @@ void GraphicsEngine::DrawCDSMarket(int x0,int y0)
 /*---------------------------DrawCDSSlots-------------------------*/
 void GraphicsEngine::DrawCDSSlots(int x0,int y0)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int y,swidth,/*r1=150,g1=170,b1=120,r2=110,g2=140,b2=90,
                         r3=90,g3=120,b3=70,r4=70,g4=90,b4=40,
@@ -144,7 +144,7 @@ void GraphicsEngine::DrawCDSProduction(int x0,int y0)
 /*---------------------------DrawCDSMapButton--------------------*/
 void GraphicsEngine::DrawCDSMapButton(int x0,int y0)
 {           
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     DrawTILE(cds1,extra1,x0,y0,76,18,267,52);
     //drawString(cds1,font1,x0+27,y0+1,"%s",data->Labels[15]);
@@ -154,7 +154,7 @@ void GraphicsEngine::DrawCDSMapButton(int x0,int y0)
 /*---------------------------DrawCDSSelected--------------------*/
 void GraphicsEngine::DrawCDSSelected(int x0,int y0)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int x1,x2;
 

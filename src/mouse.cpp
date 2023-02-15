@@ -30,8 +30,8 @@
 /*---------------------------MouseCheck--------------------------*/
 int GraphicsEngine::MouseCheck(void)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
   
   int /*x,*/y,xM,yM,i,/*k,*/tempoldx,tempoldy,no,x0,y0;
   short done=0,TXoffset=4,TYoffset=5,a=0,hl=0,hlold=0;
@@ -133,7 +133,7 @@ x0=990;
     {
       Colony *col;
       Buttons2(x0,13,y0,5,13,101,71,51,49,24);
-      if(!(col = m_pGame->FindColonyOf(data->nation)))
+      if(!(col = FindColonyOf(data->nation)))
       {
           MessageWindow(MSG_NOCDS);
           return 0;
@@ -342,7 +342,7 @@ if(data->zl==0)
 //bring up CDS    
     if(!move && map->getTile(data->mapnum)->Is(TILE_BUILD))
     {
-      Colony *col = m_pGame->FindColonyAt(data->mapnum);
+      Colony *col = FindColonyAt(data->mapnum);
       DrawTILE(map1,screen,0,0,screenResX,screenResY,0,0);
       DrawTILE(screen,cds1,0,0,screenResX,screenResY,0,0);
 
@@ -402,7 +402,7 @@ if(data->zl==0)
       {
           Unit *temp;
           bool b = map->getTile(mapclick)->Is(TILE_WATER);
-          if((temp = m_pGame->FindUnitAt(mapclick, b)) &&
+          if((temp = FindUnitAt(mapclick, b)) &&
            (temp->getNation() == data->nation))
           {
               if(temp->getOrders() != ORD_NONE)
@@ -413,7 +413,7 @@ if(data->zl==0)
 
       if(map->getTile(mapclick)->Is(TILE_BUILD))
       {
-        Colony *col = m_pGame->FindColonyAt(mapclick);
+        Colony *col = FindColonyAt(mapclick);
         DrawTILE(map1,screen,0,0,screenResX,screenResY,0,0);
         DrawTILE(screen,cds1,0,0,screenResX,screenResY,0,0);
         
@@ -534,8 +534,8 @@ x0=536;y0=734;
 /*---------------------------TileCenter--------------------------*/
 void GraphicsEngine::TileCenter(int xM,int yM)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
 
     int i;
     long oldmapnum;
@@ -588,7 +588,7 @@ void GraphicsEngine::TileCenter(int xM,int yM)
 /*---------------------------HighLight1--------------------------*/
 int GraphicsEngine::HighLight1(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int xM,yM;
     short TXoffset=4,TYoffset=5;
@@ -646,7 +646,7 @@ returns the tile number. 0=unit tile. 1=NE, 4=S, 8=N.*/
 void GraphicsEngine::HighLight2(SDL_Surface *temp,int &tempoldx,int &tempoldy,
                   int dir,int no)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
 /*checks to see if the adjacent tile is displayed on the screen 
   (not off the edge of the map display).
@@ -714,9 +714,9 @@ void GraphicsEngine::HighLight2(SDL_Surface *temp,int &tempoldx,int &tempoldy,
 /*---------------------------HighLight3--------------------------*/
 int GraphicsEngine::HighLight3(int dir)
 {
-    GlobalData* data = m_pGame->GetData();
-    Map* map = m_pGame->GetMap();
-    Unit *tmp = m_pGame->FindUnitAt(data->mapnum+dir,true);
+    GlobalData* data = _GlobalData;
+    Map* map = _Map;
+    Unit *tmp = FindUnitAt(data->mapnum+dir,true);
 
 /*determines if the adjacent tile is a legitmate move for the active 
   unit.*/

@@ -24,7 +24,7 @@
 /*---------------------------CDSmousecheck-------------------------*/
 int GraphicsEngine::CDSMouseCheck(int xM,int yM)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
 
     int x,y,x0,bckgds[2],xMold=0,yMold=0,x1;
     short drag=0;//,n,tonsold; looks unused (Brett 13.11.03)

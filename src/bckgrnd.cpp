@@ -24,7 +24,7 @@
 /*-----------------------------DrawBG----------------------------*/
 bool GraphicsEngine::DrawBG(void)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     short x,y,i;
     int x0,y0;
 

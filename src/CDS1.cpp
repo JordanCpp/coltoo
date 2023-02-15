@@ -89,7 +89,7 @@ void GraphicsEngine::UpdateCDSFields(Colony *col)
 
 void GraphicsEngine::UpdateCDSMarket(Colony *col)
 {
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = _GlobalData;
     int x, x1, swidth, c;
 
     for(x = CDS_MARKET_LEFT + 18, x1 = 1, c = IDC_FOOD; x < CDS_MARKET_LEFT + 674;

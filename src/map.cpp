@@ -38,7 +38,6 @@ Map::Map()
     long i=0;
     width  = 0;
     height = 0;
-    m_pGame = NULL;
     tileTypes = NULL;
     for(i=0;i<30000;i++)
         tiles[i]=NULL;
@@ -64,14 +63,12 @@ Map::Map(int w,int h) : width(w),height(h)
     tileTypes = NULL;
     for(i=0;i<30000;i++)
         tiles[i]=NULL;
-    m_pGame = NULL;
 }
 
 //Methods
-bool Map::Init(GameEngine *game)
+bool Map::Init(GlobalData* globalData)
 {
-    m_pGame = game;
-    GlobalData* data = m_pGame->GetData();
+    GlobalData* data = globalData;
 
     int x=0,y=0,k=0,x1,y1,land=0,x2;
     long ii=0;
@@ -314,7 +311,7 @@ Tile*   Map::getTile(int index) const
     return tiles[index];
 }
     
-Map* Map::loadMap(GameEngine *game, string fileName) //should read map size from map file
+Map* Map::loadMap(GlobalData* globalData, string fileName) //should read map size from map file
 {
     FILE *fp;
     long i;
@@ -328,7 +325,7 @@ Map* Map::loadMap(GameEngine *game, string fileName) //should read map size from
 
     char filename[25];
     
-    GlobalData *data = game->GetData();
+    GlobalData *data = globalData;
     
     if(fileName == "")
     {

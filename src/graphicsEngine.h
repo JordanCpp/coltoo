@@ -42,8 +42,6 @@ using namespace std;
 #define UpdateScreen1 UpdateScreen
 
 //forward declarations
-class GameEngine;
-class Map;
 class Unit;
 class OptionList; //added 17/6
 struct SDL_Surface;
@@ -57,8 +55,7 @@ struct SDLFont
 class GraphicsEngine
 {
 public:
-    GraphicsEngine();
-    GraphicsEngine(GameEngine*);
+    GraphicsEngine(GlobalData* globalData, OptionList* optionList, Map* map);
     ~GraphicsEngine();
 
     bool splash();                             //shows the splash screen
@@ -70,7 +67,13 @@ public:
     bool drawBackground(void);
     bool IsOnScreen(int x, int y);
     void UpdateUnitInfo(Unit *unit);
-    
+
+    Unit* FindUnitAt(long tile, bool isBoat);
+    Colony* PlaceColony(Unit* builder, long tile);
+    Colony* FindColonyAt(long tile);
+    Colony* FindColonyOf(int nation);
+    void CombatAnalysis(Unit* attacker, Unit* defender);
+
 //Accessors
   unsigned int GetScreenWidth()  {return screenWidth; }
   unsigned int GetScreenHeight() {return screenHeight;}
@@ -296,13 +299,14 @@ private:
     bool fullScreen;
     int  screenResX,screenResY;
 
-    GameEngine * m_pGame;
-
     unsigned int screenWidth;   //number of tiles displayed on the screen
     unsigned int screenHeight;
 
     SDL_Window* _Window;
 
+    GlobalData* _GlobalData;
+    OptionList* _OptionList;
+    Map* _Map;
 public:
 
 
