@@ -161,7 +161,7 @@ bool GameEngine::Init(int argc, char * argv[])
         #ifdef DEBUG
         cout<<"  Creating Global Data"<<endl;
         #endif
-        m_pData = new GlobalData (this);
+        m_pData = new GlobalData;
         if(m_pData) bSuccess &= m_pData->Init();
         else bSuccess = false;
     }

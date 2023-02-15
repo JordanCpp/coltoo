@@ -43,67 +43,6 @@
 //Constructors, destructor
 GlobalData::GlobalData()
 {
-    m_pGame      = NULL;
-
-    zl=0;flag=0;scrmax=153;mapmax=29999;
-    red=255;green=0;turnnum=1;x_res=1024;y_res=768;
-
-    tilex[0] =  1; tilex[1] = 77; tilex[2] = 153; tilex[3] = 229;
-    tilex[4] =305; tilex[5] =381; tilex[6] = 457; tilex[7] = 533;
-    tilex[8] =609; tilex[9] =685; tilex[10]= 761; tilex[11]= 837;
-    tilex[12]=913; tilex[13]=989; tilex[14]=1065; tilex[15]=1141;
-
-    gdstilesX[0] =  1; gdstilesX[1] = 52; gdstilesX[2] =103; gdstilesX[3] =154;
-    gdstilesX[4] =205; gdstilesX[5] =256; gdstilesX[6] =307; gdstilesX[7] =358;
-    gdstilesX[8] =409; gdstilesX[9] =460; gdstilesX[10]=511; gdstilesX[11]=562;
-    gdstilesX[12]=613; gdstilesX[13]=664; gdstilesX[14]=715; gdstilesX[15]=766;
-
-    tiley[0]=1;tiley[1]=52;tiley[2]=103;tiley[3]=154;tiley[4]=205;tiley[5]=256;
-
-    tiley2[0]=1; tiley2[1]=67; tiley2[2]=156; tiley2[3]=222;
-
-    shiptypenum[0]=shiptypenum[2]=shiptypenum[3]= 0;
-    shiptypenum[1]=1;
-    shiptypenum[4]=shiptypenum[5]=shiptypenum[6]= 0;
-
-    HLCheckOld[0]=HLCheckOld[1]=HLCheckOld[2]=0;
-
-    oldloc=55;scrnum=71;tw=75;th=50;rows=200;cols=150;
-    JobCount=0; visible=1;yextra=9;
-    scrndsply = 0; grid = 0; HCSradio1 = 0; Pstart = 0;
-    Tstart=1;shipnum=0;
-      
-                    /*screen directions*/
-    sNE=10;sE=1;sSE=12;sS=11;sSW=10;sW=1;sNW=12;sN=11;
-                      /*map directions*/
-    mNE=149;mE=1;mSE=151;mS=150;mSW=149;mW=1;mNW=151;mN=150;
-
-    gold=1000000;RumorFlag=0;
-
-    ReCenFlag=BIT1;MoveFlag=BIT2;UpDateFlag=BIT3;
-    NoMoveFlag=BIT4;VillageFlag=BIT5;SpaceFlag=BIT6;
-    RoadFlag=BIT7;//horz=0;vert=1;
-
-    counterbutton=2;counterspace=0;
-
-    caravel=1;//merchantman=2;galleon=3;privateer=4;frigate=5;manowar=6;
-    tons=100;counter=100;//nation=0;
-
-	rHL=0;
-	pHL=0;
-	tHL=0;
-
-//added 6/2
-//sets number of colonies and colony names to 0
-//assigns a number to each power	
-	colonyCount=0;
-	colNameCount[0]=0;colNameCount[1]=0;colNameCount[2]=0;colNameCount[3]=0;
-//  england=0;france=1;spain=2;dutch=3;tribe=4;
-}
-
-GlobalData::GlobalData(GameEngine* game)
-: m_pGame(game)
-{
     zl=0;flag=0;scrmax=153;mapmax=29999;
     red=255;green=0;turnnum=1;x_res=1024;y_res=768;
 
@@ -193,7 +132,6 @@ bool GlobalData::Init(void)
     int k,i,done=0,temp,num=0,k2=0;
     unsigned int temp0,temp1,temp2,temp3,temp4,temp5;
     FILE *fp = NULL;
-    OptionList *opts = m_pGame->GetOptions();
     
     #ifdef DEBUG
     cout<<"  Init GlobalData {"<<endl;

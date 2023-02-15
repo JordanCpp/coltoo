@@ -130,7 +130,6 @@ public:
 
 //Constructors, destructor
     GlobalData();
-    GlobalData(GameEngine*);
     ~GlobalData();
 
 //Methods
@@ -147,7 +146,6 @@ public:
 private:
     const char *GetDataValue(TiXmlNode *node,char *nodeName);
     
-    GameEngine*     m_pGame;    //GameEngine
     float           m_nYear;    //Year
   	enum context	m_nContext;		//Game context (hds,cds,mainscreen)...
 

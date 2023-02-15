@@ -37,22 +37,15 @@
 
 int main(int argc, char* argv[])
 {
-    GameEngine* colToo = NULL;
-    colToo = new GameEngine();
+    GameEngine colToo;
 
 #if defined(DEBUG) //&& defined(TEXTLOG) //log output to stdout.txt file
     freopen("./stdout.txt", "w", stdout);
     freopen("./stderr.txt", "w", stderr);
 #endif
 
-    if(colToo)
-    {
-        if(colToo->Init(argc, argv))
-        {
-            colToo->GameLoop();
-        }
-        delete colToo;
-    }
+    if (colToo.Init(argc, argv))
+        colToo.GameLoop();
 
     return 0;
 }
